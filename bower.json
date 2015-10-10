@@ -1,0 +1,25 @@
+{
+    "name": "SJ Innovation Content Management System",
+    "version": "1.0",
+    "homepage": "https://github.com/clinton2111/SJICMS",
+    "authors": [
+        "Clinton D'souza <clinton_dsouza92@yahoo.com>"
+    ],
+    "description": "Pratical task for SJI interview",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "~1.4.7",
+        "angular-ui-router": "~0.2.15",
+        "underscore": "~1.8.3",
+        "Materialize": "materialize#~0.97.1",
+        "a0-angular-storage": "~0.0.12",
+        "angular-jwt": "~0.0.9"
+    }
+}
