@@ -19,12 +19,12 @@ Admin side:
 </ul>
 <br>
 Frontend side
-<br><ul>
-</li> Listing of the pages.</li>
-</li> Use suckerfish dropdowns to show the main pages and the secondary level and the third level pages</li>
-</li> Display page contents as seen in the preview in the admin section</li>
-</li> Contact us form</li>
-</li> Use recaptcha to secure the form from spams</li>
-</li> Search contents (top header needs to have a search form)</li>
-</li> Pages needs to have a commenting facility. Anonymous can post comments but make sure you have a captcha while posting comments.</li>
+<ul>
+<li> Listing of the pages.</li>
+<li> Use suckerfish dropdowns to show the main pages and the secondary level and the third level pages</li>
+<li> Display page contents as seen in the preview in the admin section</li>
+<li> Contact us form</li>
+<li> Use recaptcha to secure the form from spams</li>
+<li> Search contents (top header needs to have a search form)</li>
+<li> Pages needs to have a commenting facility. Anonymous can post comments but make sure you have a captcha while posting comments.</li>
 </ul>
