@@ -29,6 +29,7 @@ angular.module 'adminPanel.authentication', []
           username: userData.username
           lastUpdate: moment().format('DD-MM-YYYY')
         store.set 'user', userObj
+        $state.go 'dashboard'
         Materialize.toast userData.message, '4000'
     , (error)->
       Materialize.toast error.data.message, '4000'

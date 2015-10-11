@@ -1,4 +1,4 @@
-angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5']
+angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5','adminPanel.dashBoardCtrl']
 .config ['$stateProvider', '$urlRouterProvider', '$httpProvider', 'jwtInterceptorProvider', '$locationProvider',
   ($stateProvider, $urlRouterProvider, $httpProvider, jwtInterceptorProvider, $locationProvider)->
     $stateProvider
@@ -6,6 +6,13 @@ angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       url: '/auth'
       templateUrl: 'templates/auth.html'
       controller: 'authController'
+    .state 'dashboard',
+      url: '/dashboard'
+#      abstract: true
+      templateUrl: 'templates/dashboard.html'
+      controller:'dashBoardController'
+      data:
+        requiresLogin: true
 
     $urlRouterProvider.otherwise '/auth'
     #    $locationProvider.html5Mode(true)

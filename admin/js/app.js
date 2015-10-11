@@ -1,9 +1,16 @@
-angular.module('adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5']).config([
+angular.module('adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5', 'adminPanel.dashBoardCtrl']).config([
   '$stateProvider', '$urlRouterProvider', '$httpProvider', 'jwtInterceptorProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $httpProvider, jwtInterceptorProvider, $locationProvider) {
     $stateProvider.state('auth', {
       url: '/auth',
       templateUrl: 'templates/auth.html',
       controller: 'authController'
+    }).state('dashboard', {
+      url: '/dashboard',
+      templateUrl: 'templates/dashboard.html',
+      controller: 'dashBoardController',
+      data: {
+        requiresLogin: true
+      }
     });
     $urlRouterProvider.otherwise('/auth');
     jwtInterceptorProvider.tokenGetter = [
