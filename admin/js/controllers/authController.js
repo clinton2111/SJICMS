@@ -33,7 +33,7 @@ angular.module('adminPanel.authentication', []).controller('authController', [
             lastUpdate: moment().format('DD-MM-YYYY')
           };
           store.set('user', userObj);
-          $state.go('dashboard');
+          $state.go('dashboard.home');
           return Materialize.toast(userData.message, '4000');
         }
       }, function(error) {

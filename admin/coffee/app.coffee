@@ -1,4 +1,4 @@
-angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5','adminPanel.dashBoardCtrl']
+angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5','adminPanel.dashBoardCtrl','dashBoard.pagesCtrl']
 .config ['$stateProvider', '$urlRouterProvider', '$httpProvider', 'jwtInterceptorProvider', '$locationProvider',
   ($stateProvider, $urlRouterProvider, $httpProvider, jwtInterceptorProvider, $locationProvider)->
     $stateProvider
@@ -8,9 +8,20 @@ angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       controller: 'authController'
     .state 'dashboard',
       url: '/dashboard'
-#      abstract: true
+      abstract: true
       templateUrl: 'templates/dashboard.html'
       controller:'dashBoardController'
+      data:
+        requiresLogin: true
+    .state 'dashboard.home',
+      url: ''
+      templateUrl: 'templates/dashboardHome.html'
+      data:
+        requiresLogin: true
+    .state 'dashboard.pages',
+      url: ''
+      templateUrl: 'templates/dashboardManagePages.html'
+      controller:'dashBoardPagesController'
       data:
         requiresLogin: true
 
@@ -26,6 +37,9 @@ angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
           config.headers.Authorization = user.token;
     ]
     $httpProvider.interceptors.push 'jwtInterceptor'
+
+    $urlRouterProvider.when 'dashboard', 'dashboard.home'
+    $urlRouterProvider.otherwise '/auth'
 
 ]
 .run ['$rootScope', '$state', 'store', 'jwtHelper', '$http', 'API', '$q',

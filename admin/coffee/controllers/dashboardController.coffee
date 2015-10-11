@@ -4,6 +4,9 @@ angular.module 'adminPanel.dashBoardCtrl',[]
     $ ".button-collapse"
     .sideNav();
   );
+
+  $scope.user = store.get 'user'
+
   $scope.logout = ->
     store.remove 'user'
     $state.go 'auth'

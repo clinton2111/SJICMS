@@ -1,4 +1,4 @@
-angular.module('adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5', 'adminPanel.dashBoardCtrl']).config([
+angular.module('adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5', 'adminPanel.dashBoardCtrl', 'dashBoard.pagesCtrl']).config([
   '$stateProvider', '$urlRouterProvider', '$httpProvider', 'jwtInterceptorProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $httpProvider, jwtInterceptorProvider, $locationProvider) {
     $stateProvider.state('auth', {
       url: '/auth',
@@ -6,8 +6,22 @@ angular.module('adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       controller: 'authController'
     }).state('dashboard', {
       url: '/dashboard',
+      abstract: true,
       templateUrl: 'templates/dashboard.html',
       controller: 'dashBoardController',
+      data: {
+        requiresLogin: true
+      }
+    }).state('dashboard.home', {
+      url: '',
+      templateUrl: 'templates/dashboardHome.html',
+      data: {
+        requiresLogin: true
+      }
+    }).state('dashboard.pages', {
+      url: '',
+      templateUrl: 'templates/dashboardManagePages.html',
+      controller: 'dashBoardPagesController',
       data: {
         requiresLogin: true
       }
@@ -26,7 +40,9 @@ angular.module('adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
         }
       }
     ];
-    return $httpProvider.interceptors.push('jwtInterceptor');
+    $httpProvider.interceptors.push('jwtInterceptor');
+    $urlRouterProvider.when('dashboard', 'dashboard.home');
+    return $urlRouterProvider.otherwise('/auth');
   }
 ]).run([
   '$rootScope', '$state', 'store', 'jwtHelper', '$http', 'API', '$q', function($rootScope, $state, store, jwtHelper, $http, API, $q) {

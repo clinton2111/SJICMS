@@ -3,6 +3,7 @@ angular.module('adminPanel.dashBoardCtrl', []).controller('dashBoardController',
     $scope.$on('$viewContentLoaded', function() {
       return $(".button-collapse").sideNav();
     });
+    $scope.user = store.get('user');
     return $scope.logout = function() {
       store.remove('user');
       $state.go('auth');
