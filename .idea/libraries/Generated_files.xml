@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/bower_components/angular-md5/angular-md5.min.js" />
+        <item url="file://$PROJECT_DIR$/bower_components/moment/min/moment-with-locales.min.js" />
+        <item url="file://$PROJECT_DIR$/bower_components/moment/min/locales.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/bower_components/moment/min/moment-with-locales.min.js" />
+      <root url="file://$PROJECT_DIR$/bower_components/angular-md5/angular-md5.min.js" />
+      <root url="file://$PROJECT_DIR$/bower_components/moment/min/locales.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

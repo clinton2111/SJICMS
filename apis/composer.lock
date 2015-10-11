@@ -4,31 +4,32 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8000b9007f3c68f6d0c35a10c805237b",
-    "content-hash": "338480e800f6699a3b419284134bdd51",
+    "hash": "c0b0cea8520fcdbf4f5d667d1fd59300",
+    "content-hash": "731b200efefe782867649c512c34567a",
     "packages": [
         {
             "name": "firebase/php-jwt",
-            "version": "dev-master",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "4a94b91434bf02395b4c2714ae19562116a80a10"
+                "reference": "e0a75bfb6413f22092c99b70f310ccb2cca3efa5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/4a94b91434bf02395b4c2714ae19562116a80a10",
-                "reference": "4a94b91434bf02395b4c2714ae19562116a80a10",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/e0a75bfb6413f22092c99b70f310ccb2cca3efa5",
+                "reference": "e0a75bfb6413f22092c99b70f310ccb2cca3efa5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=5.2.0"
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Firebase\\JWT\\": "src"
-                }
+                "classmap": [
+                    "Authentication/",
+                    "Exceptions/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -48,7 +49,7 @@
             ],
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
-            "time": "2015-09-08 18:13:38"
+            "time": "2015-06-22 23:26:39"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -115,7 +116,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "firebase/php-jwt": 20,
         "phpmailer/phpmailer": 20
     },
     "prefer-stable": false,
