@@ -1,4 +1,4 @@
-angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5','adminPanel.dashBoardCtrl','dashBoard.pagesCtrl']
+angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5','adminPanel.dashBoardCtrl','dashBoard.pagesCtrl','ngSanitize']
 .config ['$stateProvider', '$urlRouterProvider', '$httpProvider', 'jwtInterceptorProvider', '$locationProvider',
   ($stateProvider, $urlRouterProvider, $httpProvider, jwtInterceptorProvider, $locationProvider)->
     $stateProvider
@@ -19,9 +19,15 @@ angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       data:
         requiresLogin: true
     .state 'dashboard.pages',
-      url: ''
+      url: '/manage_pages'
       templateUrl: 'templates/dashboardManagePages.html'
       controller:'dashBoardPagesController'
+      data:
+        requiresLogin: true
+    .state 'dashboard.createPage',
+      url: '/create_page'
+      templateUrl: 'templates/dashboardCreatePages.html'
+      controller:'dashBoardCreatePagesController'
       data:
         requiresLogin: true
 
