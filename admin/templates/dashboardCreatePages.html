@@ -4,24 +4,46 @@
 
 
         <div class="row">
-            <form class="col s12" ng-submit="openModal('preview')">
+            <form class="col s12 m12 l12" ng-submit="publishPage()">
                 <div class="row">
-                    <div class="input-field col s12">
+                    <div class="input-field col s12 m12 l10">
                         <input id="title" type="text" class="validate" ng-model="post.title" length="50" required>
                         <label for="title">Page Title</label>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="input-field col s12">
+
+                    <div class="input-field col s10 m12 l10">
                         <textarea class="" ckeditor="editorOptions" ng-model="post.content"></textarea>
                     </div>
+                    <div class="input-field col s10 m12 l2">
+                        <div class="row">
+                            <a class="waves-effect waves-light btn teal" ng-click="openModal('preview')"><i
+                                    class="material-icons right">remove_red_eye</i>Preview</a>
+                        </div>
+                        <br>
+
+                        <div class="row"><p>
+                            <input type="checkbox" id="makeParent" ng-change="fetchPageList()" ng-model="parentStatus"/>
+                            <label for="makeParent">Make this a parent page</label>
+                        </p>
+                        </div>
+                        <div ng-show="choseParentFlag == false" class="input-field col s12 ">
+
+                            <select ng-model="parentId" ng-options="page.label for page in pages" class="browser-default">
+
+                            </select>
+                        </div>
+
+                    </div>
+
                 </div>
 
                 <div class="row center">
-                    <button type='submit'class="waves-effect waves-light btn teal" >Publish
+                    <button type='submit' class="waves-effect waves-light btn teal">Publish
                         <i class="material-icons right ">publish</i>
-                        </button>
+                    </button>
                     <a class="waves-effect waves-light btn teal" ng-click="saveDraft()"><i class="material-icons right">drafts</i>Save
                         as Draft</a>
                     <a class="waves-effect waves-light btn teal" ng-click="openModal('schedule')"><i
@@ -79,9 +101,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <a class="waves-effect waves-light btn teal" ng-click="publishPage()">Publish
-                        <i class="material-icons right ">publish</i></a>
-                    <button class="modal-action modal-close btn waves-effect waves-light teal">Close
+                    <button class="modal-action modal-close btn waves-effect waves-light teal">Close Preview
                         <i class="mdi-navigation-close right"></i>
                     </button>
                 </div>
