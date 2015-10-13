@@ -20,6 +20,9 @@ try {
         fetchPagesNames();
     } elseif ($data->location == 'fetchPagesForEditing') {
         fetchPagesForEditing($data);
+    } else if ($data->location == 'updatePage') {
+        updatePageInfo($data);
+
     }
 } catch (DomainException $ex) {
     header('HTTP/1.0 401 Unauthorized');
@@ -210,6 +213,28 @@ function fetchPagesInfo($data)
 
         echo json_encode($response);
 
+    } catch (exception $e) {
+        $response['status'] = 'Error';
+        $response['message'] = $e->getMessage();
+        echo json_encode($response);
+        die();
+    }
+}
+
+function updatePageInfo($data)
+{
+    $response = array();
+    try {
+        $update_post = "UPDATE `posts` SET post_title='$data->title',post_content='$data->content',publish_date='$data->publish_date',author_name='$data->author',is_draft='data->is_draft' WHERE id=$data->id";
+        $update_post_result = mysql_query($update_post) or trigger_error(mysql_error() . $update_post);
+        if ($update_post_result == 1) {
+            $response['status'] = 'Success';
+            $response['message'] = 'Post Updates';
+        } else {
+            $response['status'] = 'Error';
+            $response['message'] = 'Could not update post';
+        }
+        echo json_encode($response);
     } catch (exception $e) {
         $response['status'] = 'Error';
         $response['message'] = $e->getMessage();

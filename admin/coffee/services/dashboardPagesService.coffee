@@ -13,6 +13,19 @@ angular.module 'dashBoard.pagesCtrl'
       , (error)->
         q.reject(error)
       q.promise
+
+    updatePage: (pageData)->
+      pageData.location = 'updatePage'
+      q = $q.defer()
+      $http
+        url: API.url + 'pagesHandler.php'
+        method: 'POST'
+        data: pageData
+      .then (data)->
+        q.resolve data
+      , (error)->
+        q.reject(error)
+      q.promise
   )
 ]
 .factory 'pageLoaders', ['$http', '$q', 'API', ($http, $q, API)->

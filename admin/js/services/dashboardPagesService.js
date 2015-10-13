@@ -15,6 +15,21 @@ angular.module('dashBoard.pagesCtrl').factory('publishPages', [
           return q.reject(error);
         });
         return q.promise;
+      },
+      updatePage: function(pageData) {
+        var q;
+        pageData.location = 'updatePage';
+        q = $q.defer();
+        $http({
+          url: API.url + 'pagesHandler.php',
+          method: 'POST',
+          data: pageData
+        }).then(function(data) {
+          return q.resolve(data);
+        }, function(error) {
+          return q.reject(error);
+        });
+        return q.promise;
       }
     };
   }

@@ -1,4 +1,5 @@
-angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5','adminPanel.dashBoardCtrl','dashBoard.pagesCtrl','ngSanitize']
+angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5',
+                              'adminPanel.dashBoardCtrl', 'dashBoard.pagesCtrl', 'ngSanitize']
 .config ['$stateProvider', '$urlRouterProvider', '$httpProvider', 'jwtInterceptorProvider', '$locationProvider',
   ($stateProvider, $urlRouterProvider, $httpProvider, jwtInterceptorProvider, $locationProvider)->
     $stateProvider
@@ -10,7 +11,7 @@ angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       url: '/dashboard'
       abstract: true
       templateUrl: 'templates/dashboard.html'
-      controller:'dashBoardController'
+      controller: 'dashBoardController'
       data:
         requiresLogin: true
     .state 'dashboard.home',
@@ -21,19 +22,19 @@ angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
     .state 'dashboard.pages',
       url: '/manage_pages'
       templateUrl: 'templates/dashboardManagePages.html'
-      controller:'dashBoardPagesController'
+      controller: 'dashBoardPagesController'
       data:
         requiresLogin: true
     .state 'dashboard.createPage',
       url: '/create_page'
       templateUrl: 'templates/dashboardCreatePages.html'
-      controller:'dashBoardCreatePagesController'
+      controller: 'dashBoardCreatePagesController'
       data:
         requiresLogin: true
     .state 'dashboard.editPage',
       url: '/edit_page/:id'
       templateUrl: 'templates/dashboardEditPage.html'
-      controller:'dashBoardEditPagesController'
+      controller: 'dashBoardEditPagesController'
       data:
         requiresLogin: true
 
