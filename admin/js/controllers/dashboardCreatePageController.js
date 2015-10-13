@@ -1,32 +1,20 @@
 angular.module('dashBoard.pagesCtrl').controller('dashBoardCreatePagesController', [
-  '$scope', 'store', 'publishPages', function($scope, store, publishPages) {
+  '$scope', 'store', 'publishPages', 'pageLoaders', function($scope, store, publishPages, pageLoaders) {
     var user;
     $scope.$on('$viewContentLoaded', function() {
       $('input#title').characterCounter();
       $scope.parentStatus = true;
       $scope.choseParentFlag = true;
-      $('select').material_select();
-      return $scope.test = true;
+      return $('select').material_select();
     });
     $scope.parentId = 0;
-    $scope.pages = [
-      {
-        id: 1,
-        label: 'Page 1'
-      }, {
-        id: 2,
-        label: 'Page 2'
-      }, {
-        id: 3,
-        label: 'Page 3'
-      }
-    ];
+    $scope.pages = [];
     user = store.get('user');
     $scope.publishPage = function() {
       if ($scope.parentStatus === true) {
         $scope.post.is_parent = 'NULL';
       } else {
-        $scope.post.is_parent = $scope.parentId;
+        $scope.post.is_parent = $scope.parentId.id;
       }
       $scope.post.author = user.username;
       $scope.post.publish_date = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
@@ -82,7 +70,12 @@ angular.module('dashBoard.pagesCtrl').controller('dashBoardCreatePagesController
       if ($scope.parentStatus === true) {
         return $scope.choseParentFlag = true;
       } else {
-        return $scope.choseParentFlag = false;
+        $scope.choseParentFlag = false;
+        return pageLoaders.fetchpageNames().then(function(data) {
+          return $scope.pages = data.data.results;
+        }, function(error) {
+          return Materialize.toast('Something went wrong', 4000);
+        });
       }
     };
   }

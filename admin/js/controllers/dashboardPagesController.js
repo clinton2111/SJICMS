@@ -1,17 +1,58 @@
 angular.module('dashBoard.pagesCtrl', ['ngCkeditor', 'scDateTime']).controller('dashBoardPagesController', [
-  '$scope', 'pageLoaders', function($scope, pageLoaders) {
+  '$scope', 'pageLoaders', 'deletePost', '$location', '$state', function($scope, pageLoaders, deletePost, $location, $state) {
+    var highest;
     $scope.$on('$viewContentLoaded', function() {
       return $('.tooltipped').tooltip({
         delay: 50
       });
     });
-    return $scope.loadPages = function(offset) {
+    highest = {
+      id: 0
+    };
+    $scope.pages = [];
+    $scope.loadPages = function() {
+      var offset;
+      offset = highest.id;
       return pageLoaders.fetchpages(offset).then(function(data) {
-        return console.log(data.data);
+        var response;
+        response = data.data;
+        if (response.status === 'Success') {
+          _.each(response.results, function(index) {
+            return $scope.pages.push(index);
+          });
+          highest = _.max($scope.pages, function(page) {
+            return page.id;
+          });
+          return Materialize.toast('Pages loaded', 4000);
+        } else if (response.status === 'Error') {
+          return Materialize.toast('No more pages', 4000);
+        }
       }, function(error) {
         return Materialize.toast('Something went wrong', 4000);
       });
     };
+    $scope.deletePost = function(id) {
+      return deletePost.deletepost(id).then(function(data) {
+        var response;
+        response = data.data;
+        if (response.status === 'Success') {
+          Materialize.toast('Post Deleted.Updating Page..', 4000);
+          return $location.reload();
+        } else if (response.status === 'Error') {
+          return Materialize.toast('Something went wrong', 4000);
+        }
+      }, function(error) {
+        return Materialize.toast('Something went wrong', 4000);
+      });
+    };
+    $scope.updatePost = function(id) {
+      return $state.go('dashboard.editPage', {
+        id: id
+      });
+    };
+    return $scope.$watchCollection(['pages'], function() {
+      return $scope.$apply;
+    }, false);
   }
 ]).value('scDateTimeConfig', {
   defaultTheme: 'material',

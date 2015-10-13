@@ -1,14 +1,80 @@
-<div ng-init="loadPages(0)">
+<div ng-init="loadPages()">
     <div class="container">
         <h1 class="header red-text thin">Manage Pages</h1>
 
+        <div class="row ">
+            <div class="col s12 l12" ng-repeat="page in pages">
+                <div class="card teal darken-1 z-depth-3">
+                    <div class="card-content white-text">
+                        <span class="card-title">Title: {{page.post_title}}</span>
+
+                        <p ng-if="page.is_draft ==0">Status: Published / Scheduled</p>
+
+                        <p ng-if="page.is_draft !=0">Status: Draft</p>
+
+                        <p ng-if="page.publish_date !='Null'">Publishing Date: {{page.publish_date}}</p>
+                    </div>
+
+                    <div class="card-action">
+                        <a ng-click="updatePost(page.id)" ><i class="material-icons ">mode_edit</i>Edit</a>
+                        <a ng-click="deletePost(page.id)"><i class="material-icons">delete</i>Delete</a>
+                    </div>
+                </div>
+                <div class="col s12 l10 offset-l2 offset-s6" ng-repeat="child_lvl_1 in page.children"
+                        >
+                    <div class="card teal darken-1 z-depth-3">
+                        <div class="card-content white-text">
+                            <span class="card-title">Title: {{child_lvl_1.post_title}}</span>
+
+                            <p ng-if="child_lvl_1.is_draft ==0">Status: Published / Scheduled</p>
+
+                            <p ng-if="child_lvl_1.is_draft !=0">Status: Draft</p>
+
+                            <p ng-if="child_lvl_1.publish_date !='Null'">Publishing Date:
+                                {{child_lvl_1.publish_date}}</p>
+                        </div>
+
+                        <div class="card-action">
+                            <a ng-click="updatePost(child_lvl_1.id)"><i class="material-icons ">mode_edit</i>Edit</a>
+                            <a ng-click="deletePost(child_lvl_1.id)"><i class="material-icons">delete</i>Delete</a>
+                        </div>
+                    </div>
+                    <div class="col s12 l8 offset-l4 offset-s6" ng-repeat="child_lvl_2 in child_lvl_1.children"
+                            >
+                        <div class="card teal darken-1 z-depth-3">
+                            <div class="card-content white-text">
+                                <span class="card-title">Title: {{child_lvl_2.post_title}}</span>
+
+                                <p ng-if="child_lvl_2.is_draft ==0">Status: Published / Scheduled</p>
+
+                                <p ng-if="child_lvl_2.is_draft !=0">Status: Draft</p>
+
+                                <p ng-if="child_lvl_2.publish_date !='Null'">Publishing Date:
+                                    {{child_lvl_2.publish_date}}</p>
+                            </div>
+
+                            <div class="card-action">
+                                <a ng-click="updatePost(child_lvl_2.id)"><i class="material-icons ">mode_edit</i>Edit</a>
+                                <a ng-click="deletePost(child_lvl_2.id)"><i class="material-icons">delete</i>Delete</a>
+                            </div>
+                        </div>
 
 
+                    </div>
 
+
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <a class="waves-effect waves-light btn teal" ng-click="loadPages()">Load More
+                Posts </a>
+        </div>
 
 
         <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-            <a class="btn-floating btn-large red tooltipped" data-position="left" data-delay="50" data-tooltip="Create New Page" ui-sref="dashboard.createPage">
+            <a class="btn-floating btn-large red tooltipped" data-position="left" data-delay="50"
+               data-tooltip="Create New Page" ui-sref="dashboard.createPage">
                 <i class="large material-icons">create</i>
             </a>
         </div>

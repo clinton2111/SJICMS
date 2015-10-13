@@ -31,5 +31,51 @@ angular.module 'dashBoard.pagesCtrl'
         q.reject(error)
       q.promise
 
+    fetchpageNames: ->
+      q = $q.defer()
+      $http
+        url: API.url + 'pagesHandler.php'
+        method: 'POST'
+        data:
+          location: 'fetchPagesNames'
+      .then (data)->
+        q.resolve data
+      , (error)->
+        q.reject(error)
+      q.promise
+
+    fetchForEditing: (id)->
+      q = $q.defer()
+      $http
+        url: API.url + 'pagesHandler.php'
+        method: 'POST'
+        data:
+          id: id
+          location: 'fetchPagesForEditing'
+      .then (data)->
+        q.resolve data
+      , (error)->
+        q.reject(error)
+      q.promise
+
+
+  )
+]
+.factory 'deletePost', ['$http', '$q', 'API', ($http, $q, API)->
+  return (
+    deletepost: (id)->
+      q = $q.defer()
+      $http
+        url: API.url + 'pagesHandler.php'
+        method: 'POST'
+        data:
+          id: id
+          location: 'deletePost'
+      .then (data)->
+        q.resolve data
+      , (error)->
+        q.reject(error)
+      q.promise
+
   )
 ]

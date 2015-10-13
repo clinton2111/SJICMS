@@ -1,9 +1,9 @@
-<div>
+<div ng-init="fetchInfo()">
     <div class="container">
-        <h1 class="header red-text thin">Create New Page</h1>
+        <h1 class="header red-text thin">Edit Page</h1>
 
 
-        <div class="row">
+        <div class="row" ng-if="post">
             <form class="col s12 m12 l12" ng-submit="publishPage()">
                 <div class="row">
                     <div class="input-field col s12 m12 l10">
@@ -43,45 +43,14 @@
                 </div>
 
                 <div class="row center">
-                    <button type='submit' class="waves-effect waves-light btn teal">Publish
-                        <i class="material-icons right ">publish</i>
+                    <button type='submit' class="waves-effect waves-light btn teal">Publish Updated Version
+                        <i class="material-icons">mode_edit</i>
                     </button>
-                    <a class="waves-effect waves-light btn teal" ng-click="saveDraft()"><i class="material-icons right">drafts</i>Save
-                        as Draft</a>
-                    <a class="waves-effect waves-light btn teal" ng-click="openModal('schedule')"><i
-                            class="material-icons right">access_time</i>Schedule
-                        Post</a>
+
                 </div>
             </form>
         </div>
 
-        <!--Schedule Modal-->
-        <div id="scheduleModal" class="modal">
-            <div class="col s12">
-                <div class="modal-content">
-                    <h4 class="header thin">Schedule Post Launch Date and Time</h4>
-
-                    <div class="row">
-                        <div class="input-field col s12">
-
-                            <time-date-picker ng-model="post.publish_date"></time-date-picker>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="modal-footer">
-                    <a class="waves-effect waves-light btn teal" ng-click="schedulePost()"><i
-                            class="material-icons right">access_time</i>Schedule
-                        Post</a>
-                    <button class="modal-action modal-close btn waves-effect waves-light teal">Close
-                        <i class="mdi-navigation-close right"></i>
-                    </button>
-                </div>
-            </div>
-
-        </div>
         <!--Preview Modal-->
         <div id="previewModal" class="modal">
             <div class="col s12">

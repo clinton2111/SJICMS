@@ -32,6 +32,13 @@ angular.module('adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       data: {
         requiresLogin: true
       }
+    }).state('dashboard.editPage', {
+      url: '/edit_page/:id',
+      templateUrl: 'templates/dashboardEditPage.html',
+      controller: 'dashBoardEditPagesController',
+      data: {
+        requiresLogin: true
+      }
     });
     $urlRouterProvider.otherwise('/auth');
     jwtInterceptorProvider.tokenGetter = [

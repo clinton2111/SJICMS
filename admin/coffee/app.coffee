@@ -30,6 +30,12 @@ angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       controller:'dashBoardCreatePagesController'
       data:
         requiresLogin: true
+    .state 'dashboard.editPage',
+      url: '/edit_page/:id'
+      templateUrl: 'templates/dashboardEditPage.html'
+      controller:'dashBoardEditPagesController'
+      data:
+        requiresLogin: true
 
     $urlRouterProvider.otherwise '/auth'
     #    $locationProvider.html5Mode(true)
