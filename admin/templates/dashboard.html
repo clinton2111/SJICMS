@@ -8,16 +8,21 @@
                     <li class="avatar  nav-bg">
                         <div class="center navpic  ">
                             <img ng-src=../admin/assets/images/contacts.png class="circle" style="width: 100%">
+
                             <p class="flow-text center">Hi {{user.username}}</p>
                         </div>
                     </li>
                     <li><a ui-sref="dashboard.home" class="waves-effect waves-light"><i
                             class="material-icons left">home</i>Home</a></li>
-                    <li><a ui-sref="dashboard.pages" class="waves-effect waves-light"><i class="material-icons left">pages</i>Manage Pages</a>
+                    <li><a ui-sref="dashboard.pages" class="waves-effect waves-light"><i class="material-icons left">pages</i>Manage
+                        Pages</a>
                     </li>
                     <li><a class="waves-effect waves-light"><i class="material-icons left">comment</i>Manage
                         Comments</a></li>
-                    <li><a class="waves-effect waves-light"><i class="material-icons left">settings</i>Account Settings</a>
+                    <li><a class="waves-effect waves-light"><i class="material-icons left">email</i>Manage
+                        Mail</a></li>
+                    <li><a ui-sref="dashboard.settings" class="waves-effect waves-light"><i class="material-icons left">settings</i>Account
+                        Settings</a>
                     </li>
                     <li><a ng-click="logout()"><i class="mdi-action-exit-to-app left"></i>Logout</a></li>
                 </ul>

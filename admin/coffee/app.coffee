@@ -1,10 +1,10 @@
 angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5',
-                              'adminPanel.dashBoardCtrl', 'dashBoard.pagesCtrl', 'ngSanitize']
+                              'adminPanel.dashBoardCtrl', 'dashBoard.pagesCtrl', 'ngSanitize', 'dashboard.settingsCtrl']
 .config ['$stateProvider', '$urlRouterProvider', '$httpProvider', 'jwtInterceptorProvider', '$locationProvider',
   ($stateProvider, $urlRouterProvider, $httpProvider, jwtInterceptorProvider, $locationProvider)->
     $stateProvider
     .state 'auth',
-      url: '/auth'
+      url: '/auth/:type/:email/:value'
       templateUrl: 'templates/auth.html'
       controller: 'authController'
     .state 'dashboard',
@@ -37,6 +37,12 @@ angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       controller: 'dashBoardEditPagesController'
       data:
         requiresLogin: true
+    .state 'dashboard.settings',
+      url: '/settings'
+      templateUrl: 'templates/dashboardSettings.html'
+      controller: 'dashBoardSettingsController'
+      data:
+        requiresLogin: true
 
     $urlRouterProvider.otherwise '/auth'
     #    $locationProvider.html5Mode(true)
@@ -52,7 +58,7 @@ angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
     $httpProvider.interceptors.push 'jwtInterceptor'
 
     $urlRouterProvider.when 'dashboard', 'dashboard.home'
-    $urlRouterProvider.otherwise '/auth'
+    $urlRouterProvider.otherwise '/auth/login//'
 
 ]
 .run ['$rootScope', '$state', 'store', 'jwtHelper', '$http', 'API', '$q',

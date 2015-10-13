@@ -1,5 +1,13 @@
 angular.module('adminPanel.authentication', []).controller('authController', [
-  '$scope', 'authFactory', 'md5', 'store', '$state', function($scope, authFactory, md5, store, $state) {
+  '$scope', 'authFactory', 'md5', 'store', '$state', '$stateParams', function($scope, authFactory, md5, store, $state, $stateParams) {
+    if ($stateParams.type === 'recovery' && !_.isUndefined($stateParams.value) && !_.isUndefined($stateParams.email)) {
+      $scope.recovery_screen = true;
+      $scope.header = 'Reset Password';
+    } else {
+      $scope.recovery_screen = false;
+      $scope.header = 'Login';
+    }
+    $scope.forgotPassword = false;
     $scope.viewPass = false;
     $scope.passType = 'password';
     $scope.passIcon = 'mdi-action-visibility-off';
@@ -14,7 +22,7 @@ angular.module('adminPanel.authentication', []).controller('authController', [
         return $scope.passIcon = 'mdi-action-visibility-off';
       }
     };
-    return $scope.login = function(user) {
+    $scope.login = function(user) {
       var data;
       data = {
         email: user.email,
@@ -39,6 +47,49 @@ angular.module('adminPanel.authentication', []).controller('authController', [
       }, function(error) {
         return Materialize.toast(error.data.message, '4000');
       });
+    };
+    $scope.recoverPassword = function(recovery) {
+      return authFactory.recoverPassword(recovery).then(function(data) {
+        var response;
+        response = data.data;
+        console.log(response);
+        return Materialize.toast(response.message, 4000);
+      }, function(error) {
+        return Materialize.toast(error.data.message, 4000);
+      });
+    };
+    $scope.toggleForgotPass = function() {
+      if ($scope.forgotPassword === false) {
+        $scope.forgotPassword = true;
+        return $scope.header = 'Recover Password';
+      } else {
+        $scope.forgotPassword = false;
+        return $scope.header = 'Login';
+      }
+    };
+    return $scope.updatePassword = function(new_pass) {
+      var data;
+      if (new_pass.password === new_pass.cpassword) {
+        data = {
+          password: md5.createHash(new_pass.password || ''),
+          email: $stateParams.email,
+          value: $stateParams.value
+        };
+        return authFactory.updatePassword(data).then(function(data) {
+          var response;
+          response = data.data;
+          Materialize.toast(response.status + ' - ' + response.message, 4000);
+          return $state.go('auth', {
+            type: 'login',
+            email: null,
+            value: null
+          });
+        }, function(error) {
+          return Materialize.toast('Opps something went wrong', 4000);
+        });
+      } else {
+        return Materialize.toast('Passwords do not match', 4000);
+      }
     };
   }
 ]);

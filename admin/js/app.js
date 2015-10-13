@@ -1,7 +1,7 @@
-angular.module('adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5', 'adminPanel.dashBoardCtrl', 'dashBoard.pagesCtrl', 'ngSanitize']).config([
+angular.module('adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'adminPanel.authentication', 'angular-md5', 'adminPanel.dashBoardCtrl', 'dashBoard.pagesCtrl', 'ngSanitize', 'dashboard.settingsCtrl']).config([
   '$stateProvider', '$urlRouterProvider', '$httpProvider', 'jwtInterceptorProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $httpProvider, jwtInterceptorProvider, $locationProvider) {
     $stateProvider.state('auth', {
-      url: '/auth',
+      url: '/auth/:type/:email/:value',
       templateUrl: 'templates/auth.html',
       controller: 'authController'
     }).state('dashboard', {
@@ -39,6 +39,13 @@ angular.module('adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       data: {
         requiresLogin: true
       }
+    }).state('dashboard.settings', {
+      url: '/settings',
+      templateUrl: 'templates/dashboardSettings.html',
+      controller: 'dashBoardSettingsController',
+      data: {
+        requiresLogin: true
+      }
     });
     $urlRouterProvider.otherwise('/auth');
     jwtInterceptorProvider.tokenGetter = [
@@ -56,7 +63,7 @@ angular.module('adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
     ];
     $httpProvider.interceptors.push('jwtInterceptor');
     $urlRouterProvider.when('dashboard', 'dashboard.home');
-    return $urlRouterProvider.otherwise('/auth');
+    return $urlRouterProvider.otherwise('/auth/login//');
   }
 ]).run([
   '$rootScope', '$state', 'store', 'jwtHelper', '$http', 'API', '$q', function($rootScope, $state, store, jwtHelper, $http, API, $q) {

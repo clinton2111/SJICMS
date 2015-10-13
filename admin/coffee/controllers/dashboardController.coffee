@@ -9,6 +9,6 @@ angular.module 'adminPanel.dashBoardCtrl',[]
 
   $scope.logout = ->
     store.remove 'user'
-    $state.go 'auth'
+    $state.go 'auth', {type: 'login', email: null, value: null}
     Materialize.toast 'You have been logged out', 4000
 ]
