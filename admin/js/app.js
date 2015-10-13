@@ -46,6 +46,13 @@ angular.module('adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       data: {
         requiresLogin: true
       }
+    }).state('dashboard.manageUsers', {
+      url: '/manage_users',
+      templateUrl: 'templates/dashboardManageUsers.html',
+      controller: 'dashBoardManageUsersController',
+      data: {
+        requiresLogin: true
+      }
     });
     $urlRouterProvider.otherwise('/auth');
     jwtInterceptorProvider.tokenGetter = [

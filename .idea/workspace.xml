@@ -4,17 +4,14 @@
     <list default="true" id="cc6fdad9-1c1e-4235-a02a-8c8c18e91afe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/coffee/app.coffee" afterPath="$PROJECT_DIR$/admin/coffee/app.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/app.js" afterPath="$PROJECT_DIR$/admin/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/templates/auth.html" afterPath="$PROJECT_DIR$/admin/templates/auth.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/source/auth.php" afterPath="$PROJECT_DIR$/apis/source/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/coffee/controllers/authController.coffee" afterPath="$PROJECT_DIR$/admin/coffee/controllers/authController.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/controllers/authController.js" afterPath="$PROJECT_DIR$/admin/js/controllers/authController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/coffee/services/authService.coffee" afterPath="$PROJECT_DIR$/admin/coffee/services/authService.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/services/authService.js" afterPath="$PROJECT_DIR$/admin/js/services/authService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/source/connection.config.php" afterPath="$PROJECT_DIR$/apis/source/connection.config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/templates/dashboard.html" afterPath="$PROJECT_DIR$/admin/templates/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/coffee/controllers/dashboardController.coffee" afterPath="$PROJECT_DIR$/admin/coffee/controllers/dashboardController.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/controllers/dashboardController.js" afterPath="$PROJECT_DIR$/admin/js/controllers/dashboardController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/coffee/services/dashboardSettingService.coffee" afterPath="$PROJECT_DIR$/admin/coffee/services/dashboardSettingService.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/services/dashboardSettingService.js" afterPath="$PROJECT_DIR$/admin/js/services/dashboardSettingService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/templates/dashboardSettings.html" afterPath="$PROJECT_DIR$/admin/templates/dashboardSettings.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/coffee/controllers/dashboardSettingsController.coffee" afterPath="$PROJECT_DIR$/admin/coffee/controllers/dashboardSettingsController.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/controllers/dashboardSettingsController.js" afterPath="$PROJECT_DIR$/admin/js/controllers/dashboardSettingsController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/index.html" afterPath="$PROJECT_DIR$/admin/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/source/settingsHandler.php" afterPath="$PROJECT_DIR$/apis/source/settingsHandler.php" />
     </list>
     <ignored path="SJICMS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,8 +78,28 @@
       <file leaf-file-name="app.coffee" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/coffee/app.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2034">
-              <caret line="39" column="30" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="682" max-vertical-offset="2142">
+              <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashBoardManageUsersController.coffee" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/coffee/controllers/dashBoardManageUsersController.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+              <caret line="26" column="46" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboardManageUsers.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/templates/dashboardManageUsers.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.3333335" vertical-offset="216" max-vertical-offset="1062">
+              <caret line="20" column="100" selection-start-line="20" selection-start-column="92" selection-end-line="20" selection-end-column="100" />
               <folding />
             </state>
           </provider>
@@ -98,26 +115,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboardSettingsController.coffee" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/coffee/controllers/dashboardSettingsController.coffee">
+      <file leaf-file-name="settingsHandler.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apis/source/settingsHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.09665427" vertical-offset="1046" max-vertical-offset="2034">
+              <caret line="61" column="105" selection-start-line="61" selection-start-column="105" selection-end-line="61" selection-end-column="105" />
+              <folding>
+                <marker date="1444759316021" expanded="true" signature="806:891" placeholder="SELECT 1 FRO..users..." />
+                <marker date="1444759316021" expanded="true" signature="1060:1116" placeholder="UPDATE users..." />
+                <marker date="1444759316021" expanded="true" signature="1818:1881" placeholder="SELECT id,us..users..." />
+                <marker date="1444759316021" expanded="true" signature="2033:2188" placeholder="Insert into ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connection.config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apis/source/connection.config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.6666667" vertical-offset="0" max-vertical-offset="540">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settingsHandler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apis/source/settingsHandler.php">
+      <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apis/source/auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="450">
-              <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
-              <folding>
-                <element signature="n#updatePassword#0;n#!!top" expanded="false" />
-                <marker date="1444751659297" expanded="true" signature="644:729" placeholder="SELECT 1 FRO..users..." />
-                <marker date="1444751659297" expanded="true" signature="898:954" placeholder="UPDATE users..." />
-              </folding>
+            <state vertical-scroll-proportion="-12.0" vertical-offset="1296" max-vertical-offset="2466">
+              <caret line="90" column="204" selection-start-line="90" selection-start-column="181" selection-end-line="90" selection-end-column="204" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,19 +153,11 @@
       <file leaf-file-name="dashboardSettingService.coffee" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/coffee/services/dashboardSettingService.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-              <caret line="4" column="41" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboardSettings.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/templates/dashboardSettings.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6079855" vertical-offset="349" max-vertical-offset="900">
-              <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+              <folding>
+                <marker date="1444758359835" expanded="true" signature="124:698" placeholder="updatePassword: (password)-&gt;&#10;      password.location = 'updatePassword'&#10;      q = $q.defer()&#10;      $http&#10;        url: API.url + 'settingsHandler.php'&#10;        method: 'POST'&#10;        data: password&#10;      .then (data)-&gt;&#10;        q.resolve data&#10;      , (error)-&gt;&#10;        q.reject(error)&#10;      q.promise..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -178,15 +198,17 @@
         <option value="$PROJECT_DIR$/apis/source/mailer.php" />
         <option value="$PROJECT_DIR$/apis/source/auth.php" />
         <option value="$PROJECT_DIR$/admin/coffee/controllers/authController.coffee" />
-        <option value="$PROJECT_DIR$/apis/source/connection.config.php" />
         <option value="$PROJECT_DIR$/admin/coffee/controllers/dashboardSettings.coffee" />
+        <option value="$PROJECT_DIR$/admin/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/admin/coffee/app.coffee" />
         <option value="$PROJECT_DIR$/admin/index.html" />
-        <option value="$PROJECT_DIR$/admin/coffee/services/dashboardSettingService.coffee" />
-        <option value="$PROJECT_DIR$/admin/coffee/controllers/dashboardSettingsController.coffee" />
-        <option value="$PROJECT_DIR$/apis/source/settingsHandler.php" />
-        <option value="$PROJECT_DIR$/admin/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/admin/templates/dashboardSettings.html" />
+        <option value="$PROJECT_DIR$/admin/templates/dashboardManageUsers.html" />
+        <option value="$PROJECT_DIR$/admin/coffee/controllers/dashboardSettingsController.coffee" />
+        <option value="$PROJECT_DIR$/admin/coffee/services/dashboardSettingService.coffee" />
+        <option value="$PROJECT_DIR$/admin/coffee/controllers/dashBoardManageUsersController.coffee" />
+        <option value="$PROJECT_DIR$/apis/source/connection.config.php" />
+        <option value="$PROJECT_DIR$/apis/source/settingsHandler.php" />
       </list>
     </option>
   </component>
@@ -306,6 +328,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SJICMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SJICMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coffee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -397,8 +441,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34415585" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -440,27 +484,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="648">
-          <caret line="16" column="86" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="126" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/coffee/controllers/authController.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="756">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="864">
@@ -680,22 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/dashboardCreatePages.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34285715" vertical-offset="0" max-vertical-offset="2178">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/coffee/controllers/dashboardCreatePageController.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34434783" vertical-offset="0" max-vertical-offset="1710">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/templates/dashboardEditPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16333938" vertical-offset="0" max-vertical-offset="1350">
@@ -720,40 +732,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apis/source/connection.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49001816" vertical-offset="0" max-vertical-offset="630">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apis/source/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5724907" vertical-offset="918" max-vertical-offset="2466">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding>
-            <marker date="1444748601318" expanded="true" signature="-1:-1" placeholder="SELECT id,us..users..." />
-            <marker date="1444748601318" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-            <marker date="1444748601318" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-            <marker date="1444748601318" expanded="true" signature="-1:-1" placeholder="SELECT id,us..users..." />
-            <marker date="1444748601318" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/coffee/controllers/dashboardController.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37370244" vertical-offset="0" max-vertical-offset="578">
           <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/auth.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6533575" vertical-offset="378" max-vertical-offset="1782">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -790,22 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/coffee/app.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2034">
-          <caret line="39" column="30" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7604356" vertical-offset="499" max-vertical-offset="1170">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/coffee/services/dashboardPagesService.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43598616" vertical-offset="0" max-vertical-offset="1782">
@@ -814,32 +780,130 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49909255" vertical-offset="499" max-vertical-offset="1188">
+          <caret line="43" column="67" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/coffee/controllers/dashboardCreatePageController.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08648649" vertical-offset="6" max-vertical-offset="1710">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/auth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.7441015" vertical-offset="0" max-vertical-offset="1782">
+          <caret line="84" column="101" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/dashboardSettings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7657993" vertical-offset="308" max-vertical-offset="972">
+          <caret line="6" column="119" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="119" />
+          <caret line="7" column="119" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="119" />
+          <caret line="8" column="119" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="119" />
+          <caret line="9" column="119" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="119" />
+          <caret line="10" column="119" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="119" />
+          <caret line="11" column="119" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="119" />
+          <caret line="12" column="119" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="119" />
+          <caret line="13" column="119" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="119" />
+          <caret line="14" column="119" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="119" />
+          <caret line="15" column="119" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="119" />
+          <caret line="16" column="119" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="119" />
+          <caret line="17" column="119" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="119" />
+          <caret line="18" column="119" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="119" />
+          <caret line="19" column="119" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="119" />
+          <caret line="20" column="119" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="119" />
+          <caret line="21" column="119" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="119" />
+          <caret line="22" column="119" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="119" />
+          <caret line="23" column="119" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="119" />
+          <caret line="24" column="119" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="119" />
+          <caret line="25" column="119" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="119" />
+          <caret line="26" column="119" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="119" />
+          <caret line="27" column="119" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="119" />
+          <caret line="28" column="119" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="119" />
+          <caret line="29" column="119" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="119" />
+          <caret line="30" column="119" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="119" />
+          <caret line="31" column="119" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="119" />
+          <caret line="32" column="119" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="119" />
+          <caret line="33" column="119" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="119" />
+          <caret line="34" column="119" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="119" />
+          <caret line="35" column="119" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="119" />
+          <caret line="36" column="119" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="119" />
+          <caret line="37" column="119" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="119" />
+          <caret line="38" column="119" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="119" />
+          <caret line="39" column="119" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="119" />
+          <caret line="40" column="119" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/dashboardCreatePages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.032667875" vertical-offset="162" max-vertical-offset="2178">
+          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apis/source/pagesHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0669145" vertical-offset="0" max-vertical-offset="1980">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="30" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.5980582" vertical-offset="430" max-vertical-offset="2358">
+          <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="58" />
           <folding>
             <element signature="n#fetchPagesForEditing#0;n#!!top" expanded="false" />
             <element signature="n#fetchPagesNames#0;n#!!top" expanded="false" />
-            <element signature="n#savePageData#0;n#!!top" expanded="false" />
             <element signature="n#fetchPagesInfo#0;n#!!top" expanded="false" />
-            <marker date="1444745739485" expanded="true" signature="-1:-1" placeholder="SELECT id,po..posts..." />
-            <marker date="1444745739485" expanded="true" signature="-1:-1" placeholder="SELECT id,po..posts..." />
-            <marker date="1444745739485" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444745739485" expanded="true" signature="-1:-1" placeholder="SELECT paren..." />
-            <marker date="1444745739485" expanded="true" signature="-1:-1" placeholder="UPDATE posts..." />
-            <marker date="1444745739485" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1444745739485" expanded="true" signature="-1:-1" placeholder="SELECT id,po..." />
-            <marker date="1444745739485" expanded="true" signature="-1:-1" placeholder="SELECT id,po..." />
-            <marker date="1444745739485" expanded="true" signature="-1:-1" placeholder="SELECT id,po..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/coffee/controllers/dashboardSettingsController.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35675675" vertical-offset="0" max-vertical-offset="555">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/coffee/services/dashboardSettingService.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding>
+            <marker date="1444758359835" expanded="true" signature="124:698" placeholder="updatePassword: (password)-&gt;&#10;      password.location = 'updatePassword'&#10;      q = $q.defer()&#10;      $http&#10;        url: API.url + 'settingsHandler.php'&#10;        method: 'POST'&#10;        data: password&#10;      .then (data)-&gt;&#10;        q.resolve data&#10;      , (error)-&gt;&#10;        q.reject(error)&#10;      q.promise..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/coffee/app.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="682" max-vertical-offset="2142">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/coffee/controllers/dashBoardManageUsersController.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/dashboardManageUsers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3333335" vertical-offset="216" max-vertical-offset="1062">
+          <caret line="20" column="100" selection-start-line="20" selection-start-column="92" selection-end-line="20" selection-end-column="100" />
           <folding />
         </state>
       </provider>
@@ -852,31 +916,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/coffee/controllers/dashboardSettingsController.coffee">
+    <entry file="file://$PROJECT_DIR$/apis/source/connection.config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state vertical-scroll-proportion="-0.6666667" vertical-offset="0" max-vertical-offset="540">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/source/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="1296" max-vertical-offset="2466">
+          <caret line="90" column="204" selection-start-line="90" selection-start-column="181" selection-end-line="90" selection-end-column="204" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apis/source/settingsHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="450">
-          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.09665427" vertical-offset="1046" max-vertical-offset="2034">
+          <caret line="61" column="105" selection-start-line="61" selection-start-column="105" selection-end-line="61" selection-end-column="105" />
           <folding>
-            <element signature="n#updatePassword#0;n#!!top" expanded="false" />
-            <marker date="1444751659297" expanded="true" signature="644:729" placeholder="SELECT 1 FRO..users..." />
-            <marker date="1444751659297" expanded="true" signature="898:954" placeholder="UPDATE users..." />
+            <marker date="1444759316021" expanded="true" signature="806:891" placeholder="SELECT 1 FRO..users..." />
+            <marker date="1444759316021" expanded="true" signature="1060:1116" placeholder="UPDATE users..." />
+            <marker date="1444759316021" expanded="true" signature="1818:1881" placeholder="SELECT id,us..users..." />
+            <marker date="1444759316021" expanded="true" signature="2033:2188" placeholder="Insert into ..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/dashboardSettings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6079855" vertical-offset="349" max-vertical-offset="900">
-          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>

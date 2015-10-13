@@ -13,5 +13,18 @@ angular.module 'dashboard.settingsCtrl'
       , (error)->
         q.reject(error)
       q.promise
+
+    addUser: (data)->
+      data.location = 'addUser'
+      q = $q.defer()
+      $http
+        url: API.url + 'settingsHandler.php'
+        method: 'POST'
+        data: data
+      .then (data)->
+        q.resolve data
+      , (error)->
+        q.reject(error)
+      q.promise
   )
 ]

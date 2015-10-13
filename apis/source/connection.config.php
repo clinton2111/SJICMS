@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Clinton
- * Date: 10/11/2015
- * Time: 1:16 PM
- */
+
 $key = md5('mySecretKey');
 $alg = 'HS512';
 

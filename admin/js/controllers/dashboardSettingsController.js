@@ -1,6 +1,6 @@
 angular.module('dashboard.settingsCtrl', []).controller('dashBoardSettingsController', [
-  '$scope', 'md5', 'settingsFactory', function($scope, md5, settingsFactory) {
-    return $scope.updatePassword = function(password) {
+  '$scope', 'md5', 'settingsFactory', '$state', function($scope, md5, settingsFactory, $state) {
+    $scope.updatePassword = function(password) {
       var data;
       if (password["new"] !== password.confirm) {
         return Materialize.toast('New password and confirmation password do not match', 4000);
@@ -22,6 +22,9 @@ angular.module('dashboard.settingsCtrl', []).controller('dashBoardSettingsContro
           return Materialize.toast('Something went wrong', 4000);
         });
       }
+    };
+    return $scope.openAdminPage = function() {
+      return $state.go('dashboard.manageUsers');
     };
   }
 ]);

@@ -43,6 +43,12 @@ angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       controller: 'dashBoardSettingsController'
       data:
         requiresLogin: true
+    .state 'dashboard.manageUsers',
+      url: '/manage_users'
+      templateUrl: 'templates/dashboardManageUsers.html'
+      controller: 'dashBoardManageUsersController'
+      data:
+        requiresLogin: true
 
     $urlRouterProvider.otherwise '/auth'
     #    $locationProvider.html5Mode(true)
