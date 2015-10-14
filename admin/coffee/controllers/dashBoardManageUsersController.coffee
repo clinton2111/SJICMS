@@ -3,6 +3,7 @@ angular.module 'dashboard.settingsCtrl'
   $scope.$on('$viewContentLoaded', ()->
     $('select').material_select();
   );
+
   $scope.roles = [
     {
       value: 'admin',
@@ -13,9 +14,12 @@ angular.module 'dashboard.settingsCtrl'
     }
   ]
   $scope.createuser = ()->
+    if (_.isNull($scope.newuser.role) or _.isEmpty($scope.newuser.role) or _.isUndefined($scope.newuser.role))
+      Materialize.toast 'Please assign a role', 4000
+      return false
+
     $scope.newuser.role = $scope.newuser.role.value;
     $scope.newuser.passEncrypted = md5.createHash($scope.newuser.password || '')
-    console.log $scope.newuser
     settingsFactory.addUser($scope.newuser)
     .then (data)->
       response = data.data

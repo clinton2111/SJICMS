@@ -3,10 +3,10 @@ angular.module 'dashBoard.pagesCtrl', ['ngCkeditor', 'scDateTime']
   $scope.$on('$viewContentLoaded', ()->
     $('.tooltipped').tooltip({delay: 50});
   );
-  highest = {id: 0}
+  offset=0
   $scope.pages = [];
   $scope.loadPages = ()->
-    offset = highest.id
+    offset
     pageLoaders.fetchpages(offset)
     .then (data)->
       response = data.data
@@ -14,8 +14,8 @@ angular.module 'dashBoard.pagesCtrl', ['ngCkeditor', 'scDateTime']
         _.each(response.results, (index)->
           $scope.pages.push(index)
         )
-        highest = _.max $scope.pages, (page) ->
-          page.id
+
+        offset=$scope.pages.length;
         Materialize.toast('Pages loaded', 4000);
       else if response.status is 'Error'
         Materialize.toast('No more pages', 4000);

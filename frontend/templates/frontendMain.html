@@ -1,0 +1,71 @@
+<div>
+    <div class="navbar-fixed z-depth-3">
+        <nav class="teal darken-2">
+            <div class="nav-wrapper container">
+                <a href=# data-activates=nav-mobile class=button-collapse><i class=mdi-navigation-menu></i></a><a
+                    class="brand-logo">SJI Blog</a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <form>
+                            <div class="input-field">
+                                <input id="search" type="search" required placeholder="Search">
+                                <label for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </li>
+                    <li><a ui-sref="home.main">Home</a></li>
+                    <li><a ui-sref="home.pages">Posts</a></li>
+                    <li><a href=#Contact>Contact</a></li>
+                </ul>
+                <ul id=nav-mobile class=side-nav>
+                    <li>
+                        <form>
+                            <div class="input-field">
+                                <input id="search-mobile" type="search" required placeholder="Search">
+                                <label for="search-mobile"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </li>
+                    <li><a ui-sref="home.main">Home</a></li>
+                    <li><a ui-sref="home.pages">Posts</a></li>
+                    <li><a href=#Contact>Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div ui-view></div>
+    <div>
+        <footer class="page-footer teal darken-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Contact Details</h5>
+
+                        <p class="teal-text text-lighten-4">Phone Number: (+91) - 9999999999</p>
+
+                        <p class="teal-text text-lighten-4">Email: info@info.com</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul class="inline">
+                            <li><a href="#"><i class="fa fa-facebook fa-2x white-text"></i></a></li>
+                            <li><a href="#"><i class="fa fa-envelope fa-2x white-text"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © Copyright SJI
+                    <div class="right">Site Created by Clinton D'souza<a href="#" class="credPadding"><i
+                            class="fa fa-facebook fa-1x white-text"></i></a><a href="#" class="credPadding"><i
+                            class="fa fa-twitter fa-1x white-text"></i></a><a href="#" class="credPadding"><i
+                            class="fa fa-instagram fa-1x white-text"></i></a><a href="#" class="credPadding"><i
+                            class="fa fa-envelope fa-1x white-text"></i></a></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>

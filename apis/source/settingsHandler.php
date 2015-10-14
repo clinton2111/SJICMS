@@ -14,7 +14,7 @@ try {
     if ($data->location == 'updatePassword') {
         updatePassword($data);
     } elseif ($data->location == 'addUser') {
-        addNewUser($data,$SMTPDetails,$HOST);
+        addNewUser($data, $SMTPDetails, $HOST);
     }
 } catch (DomainException $ex) {
     header('HTTP/1.0 401 Unauthorized');
@@ -48,7 +48,7 @@ function updatePassword($data)
     }
 }
 
-function addNewUser($data,$SMTPDetails,$HOST)
+function addNewUser($data, $SMTPDetails, $HOST)
 {
     try {
         $sql = "SELECT id,username FROM users WHERE BINARY email='$data->email'";
@@ -59,7 +59,8 @@ function addNewUser($data,$SMTPDetails,$HOST)
             $sql = "Insert into users (email,password,username,role) VALUES ('" . $data->email . "','" . $data->passEncrypted . "','" . $data->name . "','" . $data->role . "')";
             $result = mysql_query($sql) or die(mysql_error());
             if ($result == 1) {
-                $msgStructure = 'Hello ' . $data->name . '<br> You have assigned as a ' . $data->role . ' at SJICMS.Please use the following credentials to log into ' . $HOST . '/admin/#/auth/login//  the admin panel<br>Email:' . $data->email . '<br>Password:' . $data->password;
+                $rarUrl = $HOST . '/admin/#/auth/login//';
+                $msgStructure = 'Hello ' . $data->name . '<br> You have assigned as a ' . $data->role . ' at SJICMS.Please use the following credentials to log into the <a href="' . $rarUrl . '">admin panel</a><br>Email:' . $data->email . '<br>Password:' . $data->password;
                 $message['From'] = 'noreply@sjicms.com';
                 $message['FromName'] = 'SJI CMS - Admin Role';
 

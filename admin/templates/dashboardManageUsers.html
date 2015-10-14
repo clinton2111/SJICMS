@@ -34,7 +34,7 @@
                 <div class="row">
                     <p>Select role</p>
                     <select class="input-field col s12 m6 l6 browser-default" ng-model="newuser.role"
-                            ng-options="role.label for role in roles">
+                            ng-options="role.label for role in roles" ng-init="newuser.role = roles[1]">
 
                     </select>
 

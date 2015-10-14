@@ -1,18 +1,15 @@
 angular.module('dashBoard.pagesCtrl', ['ngCkeditor', 'scDateTime']).controller('dashBoardPagesController', [
   '$scope', 'pageLoaders', 'deletePost', '$location', '$state', function($scope, pageLoaders, deletePost, $location, $state) {
-    var highest;
+    var offset;
     $scope.$on('$viewContentLoaded', function() {
       return $('.tooltipped').tooltip({
         delay: 50
       });
     });
-    highest = {
-      id: 0
-    };
+    offset = 0;
     $scope.pages = [];
     $scope.loadPages = function() {
-      var offset;
-      offset = highest.id;
+      offset;
       return pageLoaders.fetchpages(offset).then(function(data) {
         var response;
         response = data.data;
@@ -20,9 +17,7 @@ angular.module('dashBoard.pagesCtrl', ['ngCkeditor', 'scDateTime']).controller('
           _.each(response.results, function(index) {
             return $scope.pages.push(index);
           });
-          highest = _.max($scope.pages, function(page) {
-            return page.id;
-          });
+          offset = $scope.pages.length;
           return Materialize.toast('Pages loaded', 4000);
         } else if (response.status === 'Error') {
           return Materialize.toast('No more pages', 4000);

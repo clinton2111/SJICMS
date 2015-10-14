@@ -13,9 +13,12 @@ angular.module('dashboard.settingsCtrl').controller('dashBoardManageUsersControl
       }
     ];
     return $scope.createuser = function() {
+      if (_.isNull($scope.newuser.role) || _.isEmpty($scope.newuser.role) || _.isUndefined($scope.newuser.role)) {
+        Materialize.toast('Please assign a role', 4000);
+        return false;
+      }
       $scope.newuser.role = $scope.newuser.role.value;
       $scope.newuser.passEncrypted = md5.createHash($scope.newuser.password || '');
-      console.log($scope.newuser);
       return settingsFactory.addUser($scope.newuser).then(function(data) {
         var response;
         response = data.data;

@@ -29,7 +29,7 @@ angular.module('dashBoard.pagesCtrl').controller('dashBoardEditPagesController',
     user = store.get('user');
     return $scope.publishPage = function() {
       $scope.post.author = user.username;
-      $scope.post.publish_date = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+      $scope.post.publish_date = moment().format("YYYY-MM-DD h:mm:ss a");
       $scope.post.is_draft = false;
       return publishPages.updatePage($scope.post).then(function(data) {
         console.log(data);
