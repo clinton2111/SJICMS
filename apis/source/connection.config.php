@@ -3,6 +3,7 @@
 $key = md5('mySecretKey');
 $alg = 'HS512';
 
+$gCaptchaSecretKey='6LfLzA4TAAAAAHrVlvXujdLDL9R-5h7w5I03jwdz';
 $HOST = 'http://sjicms.com';
 
 $SMTPDetails = array();

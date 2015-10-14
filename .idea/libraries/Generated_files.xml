@@ -1451,6 +1451,7 @@
         <item url="file://$PROJECT_DIR$/bower_components/ckeditor/plugins/forms/lang/sk.min.js" />
         <item url="file://$PROJECT_DIR$/bower_components/ckeditor/plugins/forms/lang/sl.min.js" />
         <item url="file://$PROJECT_DIR$/bower_components/ckeditor/plugins/flash/lang/it.min.js" />
+        <item url="file://$PROJECT_DIR$/bower_components/angular-recaptcha/release/angular-recaptcha.min.js" />
         <item url="file://$PROJECT_DIR$/bower_components/ckeditor/plugins/flash/lang/is.min.js" />
         <item url="file://$PROJECT_DIR$/bower_components/ckeditor/plugins/flash/lang/ka.min.js" />
         <item url="file://$PROJECT_DIR$/bower_components/ckeditor/plugins/flash/lang/ja.min.js" />
@@ -2481,6 +2482,7 @@
       <root url="file://$PROJECT_DIR$/bower_components/ng-ckeditor/examples/js/angular-resource.min.min.js" />
       <root url="file://$PROJECT_DIR$/bower_components/ng-ckeditor/examples/js/angular-mocks.min.js" />
       <root url="file://$PROJECT_DIR$/bower_components/ng-ckeditor/Gruntfile.min.js" />
+      <root url="file://$PROJECT_DIR$/bower_components/angular-recaptcha/release/angular-recaptcha.min.js" />
       <root url="file://$PROJECT_DIR$/bower_components/ckeditor/plugins/find/lang/vi.min.js" />
       <root url="file://$PROJECT_DIR$/bower_components/ckeditor/plugins/find/lang/zh.min.js" />
       <root url="file://$PROJECT_DIR$/bower_components/ckeditor/plugins/find/lang/en-au.min.js" />

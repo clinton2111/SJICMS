@@ -1,4 +1,4 @@
-angular.module('sjiFrontEnd', ['ui.router', 'frontend.main', 'ngSanitize', 'reCAPTCHA']).config([
+angular.module('sjiFrontEnd', ['ui.router', 'frontend.main', 'ngSanitize', 'vcRecaptcha']).config([
   '$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $stateProvider.state('home', {
@@ -29,7 +29,8 @@ angular.module('sjiFrontEnd', ['ui.router', 'frontend.main', 'ngSanitize', 'reCA
     return $urlRouterProvider.when('home', 'home.main');
   }
 ]).constant('API', {
-  url: '../apis/source/'
+  url: '../apis/source/',
+  g_reCaptchaKey: '6LfLzA4TAAAAABb_of_QSIS_VGplvbCpnD7cSCt-'
 }).run([
   '$rootScope', function($rootScope) {
     return $rootScope.$on("$stateChangeError", console.log.bind(console));

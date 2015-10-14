@@ -56,7 +56,7 @@ function addNewUser($data, $SMTPDetails, $HOST)
         $count = mysql_num_rows($result);
 
         if ($count != 1) {
-            $sql = "Insert into users (email,password,username,role) VALUES ('" . $data->email . "','" . $data->passEncrypted . "','" . $data->name . "','" . $data->role . "')";
+            $sql = "Insert into users (email,password,username,role) VALUES ('" . $data->email . "','" . $data->passEncrypted . "','" . addslashes($data->name) . "','" . $data->role . "')";
             $result = mysql_query($sql) or die(mysql_error());
             if ($result == 1) {
                 $rarUrl = $HOST . '/admin/#/auth/login//';

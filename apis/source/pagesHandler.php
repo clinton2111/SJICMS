@@ -93,7 +93,7 @@ function savePageData($data)
 {
     $response = array();
     try {
-        $sql = "INSERT INTO posts (post_title,post_content,publish_date,is_draft,author_name,parent_page_id) VALUES ('" . $data->title . "','" . $data->content . "','" . $data->publish_date . "','" . $data->is_draft . "','" . $data->author . "','" . $data->is_parent . "')";
+        $sql = "INSERT INTO posts (post_title,post_content,publish_date,is_draft,author_name,parent_page_id) VALUES ('" . addslashes($data->title) . "','" . addslashes($data->content) . "','" . $data->publish_date . "','" . $data->is_draft . "','" . addslashes($data->author) . "','" . $data->is_parent . "')";
         $result = mysql_query($sql) or die(mysql_error());
         if ($result == 1) {
             $response['status'] = 'Success';
@@ -130,8 +130,17 @@ function deletePost($data)
                     $delete_post = "DELETE FROM posts WHERE id=$data->id";
                     $delete_result = mysql_query($delete_post) or trigger_error(mysql_error() . $delete_post);
                     if ($delete_result == 1) {
-                        $response['status'] = 'Success';
-                        $response['message'] = 'Post Deleted';
+                        $delete_comments = "DELETE FROM comments WHERE post_id=$data->id";
+                        $delete_comments_result = mysql_query($delete_comments) or trigger_error(mysql_error() . $delete_comments);
+                        if ($delete_comments_result == 1) {
+                            $response['status'] = 'Success';
+                            $response['message'] = 'Post Deleted';
+                        } else {
+                            $response['status'] = 'Error';
+                            $response['message'] = 'Comments could not be deleted';
+                            die();
+                        }
+
                     } else {
                         $response['status'] = 'Error';
                         $response['message'] = 'Post could not be deleted';

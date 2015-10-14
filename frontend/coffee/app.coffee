@@ -1,4 +1,4 @@
-angular.module 'sjiFrontEnd', ['ui.router', 'frontend.main','ngSanitize','reCAPTCHA']
+angular.module 'sjiFrontEnd', ['ui.router', 'frontend.main','ngSanitize','vcRecaptcha']
 .config ['$stateProvider', '$urlRouterProvider', '$locationProvider',
   ($stateProvider, $urlRouterProvider, $locationProvider)->
     $locationProvider.html5Mode(true)
@@ -34,6 +34,7 @@ angular.module 'sjiFrontEnd', ['ui.router', 'frontend.main','ngSanitize','reCAPT
 ]
 .constant 'API',
   url: '../apis/source/'
+  g_reCaptchaKey:'6LfLzA4TAAAAABb_of_QSIS_VGplvbCpnD7cSCt-'
 
 
 .run ['$rootScope',
