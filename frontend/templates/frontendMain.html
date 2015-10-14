@@ -8,7 +8,8 @@
                     <li>
                         <form>
                             <div class="input-field">
-                                <input id="search" type="search" required placeholder="Search">
+                                <input id="search" type="search" required placeholder="Search" ng-model="search.query"
+                                       ng-keypress="$event.keyCode == 13 && searchPosts()">
                                 <label for="search"><i class="material-icons">search</i></label>
                                 <i class="material-icons">close</i>
                             </div>
@@ -16,7 +17,7 @@
                     </li>
                     <li><a ui-sref="home.main">Home</a></li>
                     <li><a ui-sref="home.pages">Posts</a></li>
-                    <li><a href=#Contact>Contact</a></li>
+                    <li><a ui-sref="home.contact">Contact</a></li>
                 </ul>
                 <ul id=nav-mobile class=side-nav>
                     <li>
@@ -30,7 +31,7 @@
                     </li>
                     <li><a ui-sref="home.main">Home</a></li>
                     <li><a ui-sref="home.pages">Posts</a></li>
-                    <li><a href=#Contact>Contact</a></li>
+                    <li><a ui-sref="home.contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -45,7 +46,7 @@
 
                         <p class="teal-text text-lighten-4">Phone Number: (+91) - 9999999999</p>
 
-                        <p class="teal-text text-lighten-4">Email: info@info.com</p>
+                        <p class="teal-text text-lighten-4">Email: info@sji.com</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Links</h5>

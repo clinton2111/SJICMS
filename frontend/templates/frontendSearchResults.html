@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Search Results for "{{query}}" - {{results.length}} results</h1>
+
+    <div class="col s12 m8 l8">
+
+        <ul class="collection" ng-repeat="result in results | unique:'id'">
+            <a href="#" ui-sref="home.pageinfo({id: {{result.id}} })">
+                <li class="collection-item avatar">
+                    <span class="title">{{result.post_title}}</span>
+
+                    <p>Author - {{result.author_name}} <br>
+                        Date Published - {{result.publish_date | myDate}}
+                    </p>
+                    <!--<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>-->
+                </li>
+            </a>
+        </ul>
+
+    </div>
+</div>

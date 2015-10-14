@@ -1,4 +1,4 @@
-angular.module 'sjiFrontEnd', ['ui.router', 'frontend.main','ngSanitize','vcRecaptcha']
+angular.module 'sjiFrontEnd', ['ui.router', 'frontend.main', 'ngSanitize', 'vcRecaptcha']
 .config ['$stateProvider', '$urlRouterProvider', '$locationProvider',
   ($stateProvider, $urlRouterProvider, $locationProvider)->
     $locationProvider.html5Mode(true)
@@ -25,6 +25,14 @@ angular.module 'sjiFrontEnd', ['ui.router', 'frontend.main','ngSanitize','vcReca
     .state 'home.later',
       url: '/later'
       templateUrl: 'frontend/templates/later.html'
+    .state 'home.contact',
+      url: '/contact_us'
+      templateUrl: 'frontend/templates/frontendContactUs.html'
+      controller: 'frontendContactUsController'
+    .state 'home.searchResults',
+      url: '/search/:query/:results/'
+      templateUrl: 'frontend/templates/frontendSearchResults.html'
+      controller: 'frontendSearchResultsController'
 
 
     $urlRouterProvider.otherwise '/home'
@@ -34,7 +42,7 @@ angular.module 'sjiFrontEnd', ['ui.router', 'frontend.main','ngSanitize','vcReca
 ]
 .constant 'API',
   url: '../apis/source/'
-  g_reCaptchaKey:'6LfLzA4TAAAAABb_of_QSIS_VGplvbCpnD7cSCt-'
+  g_reCaptchaKey: '6LfLzA4TAAAAABb_of_QSIS_VGplvbCpnD7cSCt-'
 
 
 .run ['$rootScope',

@@ -33,6 +33,23 @@ angular.module 'frontend.main'
         q.reject(error)
       q.promise
 
+    fetchSearchResults: (query,now)->
+      data =
+        location: 'fetchSearchResults'
+        query: query
+        now:now
+
+      q = $q.defer()
+      $http
+        url: API.url + 'frontendHandler.php'
+        method: 'POST'
+        data: data
+      .then (data)->
+        q.resolve data
+      , (error)->
+        q.reject(error)
+      q.promise
+
   )
 
 ]
@@ -56,6 +73,22 @@ angular.module 'frontend.main'
         location: 'loadMoreComments'
         id: id
         offset: offset
+      q = $q.defer()
+      $http
+        url: API.url + 'frontendHandler.php'
+        method: 'POST'
+        data: data
+      .then (data)->
+        q.resolve data
+      , (error)->
+        q.reject(error)
+      q.promise
+  )
+]
+.factory 'ContactFactory', ['$http', '$q', 'API', ($http, $q, API)->
+  return(
+    sendEmail: (data)->
+      data.location = 'sendEmail'
       q = $q.defer()
       $http
         url: API.url + 'frontendHandler.php'

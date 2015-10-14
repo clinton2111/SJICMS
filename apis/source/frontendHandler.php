@@ -11,6 +11,10 @@ try {
         postComment($data, $secretKey = $gCaptchaSecretKey);
     } else if ($data->location == 'loadMoreComments') {
         loadMoreComments($data);
+    } else if ($data->location == 'sendEmail') {
+        sendEmail($data);
+    } else if ($data->location == 'fetchSearchResults') {
+        fetchSearchResults($data);
     }
 
 } catch (Exception $e) {
@@ -23,7 +27,7 @@ function fetchPages($data)
 
     try {
         $resultArray = array();
-        $sql = "SELECT id,post_title,author_name,publish_date FROM posts WHERE is_draft=0 ORDER BY id DESC LIMIT 4 OFFSET $data->offset ";
+        $sql = "SELECT id,post_title,author_name,publish_date FROM posts WHERE is_draft=0 ORDER BY id DESC LIMIT 5 OFFSET $data->offset ";
         $result = mysql_query($sql) or trigger_error(mysql_error() . $sql);
         $count = mysql_num_rows($result);
         $index = 0;
@@ -190,6 +194,67 @@ function loadMoreComments($data)
         } else {
             $response['status'] = 'Error';
             $response['message'] = 'No Comments found';
+        }
+        echo json_encode($response);
+
+    } catch (Exception $e) {
+        $response['status'] = 'Error';
+        $response['message'] = $e->getMessage();
+        echo json_encode($response);
+        die();
+    }
+
+}
+
+function sendEmail($data)
+{
+    $response = array();
+    try {
+        $sql = "INSERT INTO mail (sender_name,sender_email,sender_subject,sender_message,sent_time) VALUES ('" . $data->name . "','" . $data->address . "','" . $data->subject . "','" . addslashes($data->msg) . "','" . $data->now . "')";
+        $result = mysql_query($sql) or die(mysql_error());
+        if ($result == 1) {
+            $response['status'] = 'Success';
+            $response['message'] = 'Email sent successfully';
+        } else {
+            $response['status'] = 'Error';
+            $response['message'] = 'Could not send email';
+        }
+
+        echo json_encode($response);
+    } catch (exception $e) {
+        $response['status'] = 'Error';
+        $response['message'] = $e->getMessage();
+        echo json_encode($response);
+        die();
+    }
+}
+
+function fetchSearchResults($data)
+{
+    $response = array();
+
+    try {
+        $resultArray = array();
+        $sql = "SELECT id,post_title,author_name,publish_date FROM posts`post_title` WHERE (post_title LIKE '%$data->query%') OR (post_content LIKE '%$data->query%')OR (author_name LIKE '%$data->query%')";
+        $result = mysql_query($sql) or trigger_error(mysql_error() . $sql);
+        $count = mysql_num_rows($result);
+        $index = 0;
+        if ($count > 0) {
+            while ($row = mysql_fetch_assoc($result)) {
+
+                if (strtotime($data->now) > strtotime($row['publish_date'])) {
+                    $resultArray[$index] = $row;
+                    $index++;
+                }
+
+
+            }
+            $response['status'] = 'Success';
+            $response['message'] = 'Data present';
+            $response['results'] = json_encode($resultArray);
+        } else {
+            $response['status'] = 'Error';
+            $response['message'] = 'No Posts found';
         }
         echo json_encode($response);
 

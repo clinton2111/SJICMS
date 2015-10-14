@@ -24,6 +24,14 @@ angular.module('sjiFrontEnd', ['ui.router', 'frontend.main', 'ngSanitize', 'vcRe
     }).state('home.later', {
       url: '/later',
       templateUrl: 'frontend/templates/later.html'
+    }).state('home.contact', {
+      url: '/contact_us',
+      templateUrl: 'frontend/templates/frontendContactUs.html',
+      controller: 'frontendContactUsController'
+    }).state('home.searchResults', {
+      url: '/search/:query/:results/',
+      templateUrl: 'frontend/templates/frontendSearchResults.html',
+      controller: 'frontendSearchResultsController'
     });
     $urlRouterProvider.otherwise('/home');
     return $urlRouterProvider.when('home', 'home.main');

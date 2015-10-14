@@ -3,7 +3,7 @@
 
     <div class="col s12 m8 l8">
 
-        <ul class="collection" ng-repeat="page in pages | unique:'id'">
+        <ul class="collection" ng-repeat="page in pages | unique:'id' ">
             <a href="#" ui-sref="home.pageinfo({id: {{page.id}} })">
                 <li class="collection-item avatar">
                     <span class="title">{{page.post_title}}</span>

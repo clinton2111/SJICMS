@@ -38,6 +38,25 @@ angular.module('frontend.main').factory('fetcherFactory', [
           return q.reject(error);
         });
         return q.promise;
+      },
+      fetchSearchResults: function(query, now) {
+        var data, q;
+        data = {
+          location: 'fetchSearchResults',
+          query: query,
+          now: now
+        };
+        q = $q.defer();
+        $http({
+          url: API.url + 'frontendHandler.php',
+          method: 'POST',
+          data: data
+        }).then(function(data) {
+          return q.resolve(data);
+        }, function(error) {
+          return q.reject(error);
+        });
+        return q.promise;
       }
     };
   }
@@ -66,6 +85,26 @@ angular.module('frontend.main').factory('fetcherFactory', [
           id: id,
           offset: offset
         };
+        q = $q.defer();
+        $http({
+          url: API.url + 'frontendHandler.php',
+          method: 'POST',
+          data: data
+        }).then(function(data) {
+          return q.resolve(data);
+        }, function(error) {
+          return q.reject(error);
+        });
+        return q.promise;
+      }
+    };
+  }
+]).factory('ContactFactory', [
+  '$http', '$q', 'API', function($http, $q, API) {
+    return {
+      sendEmail: function(data) {
+        var q;
+        data.location = 'sendEmail';
         q = $q.defer();
         $http({
           url: API.url + 'frontendHandler.php',

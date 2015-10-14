@@ -1,8 +1,24 @@
 angular.module('frontend.main', []).controller('frontendMainController', [
-  '$scope', function($scope) {
-    return $scope.$on('$viewContentLoaded', function() {
+  '$scope', 'fetcherFactory', '$state', function($scope, fetcherFactory, $state) {
+    $scope.$on('$viewContentLoaded', function() {
       return $(".button-collapse").sideNav();
     });
+    return $scope.searchPosts = function() {
+      return fetcherFactory.fetchSearchResults($scope.search.query, moment().format("YYYY-MM-DD h:mm:ss a")).then(function(data) {
+        var temp_storage;
+        if (data.data.status === 'Success') {
+          temp_storage = JSON.parse(data.data.results);
+          return $state.go('home.searchResults', {
+            query: $scope.search.query,
+            results: JSON.stringify(temp_storage)
+          });
+        } else {
+          return Materialize.toast(data.data.message, 4000);
+        }
+      }, function(error) {
+        return Materialize.toast('Something went wrong', 4000);
+      });
+    };
   }
 ]).filter('unique', function() {
   return function(collection, keyname) {
