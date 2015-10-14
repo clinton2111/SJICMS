@@ -26,23 +26,11 @@ angular.module('frontend.main').controller('frontendPagesController', [
         return $scope.showLoader = false;
       });
     };
-    return $scope.loadMore = function() {
+    $scope.loadMore = function() {
       return $scope.fetchPages();
     };
+    return $scope.formatDate = function(date) {
+      return moment(date, 'YYYY-MM-DD h:mm:ss a').format('YYYY/MM/DD');
+    };
   }
-]).filter('unique', function() {
-  return function(collection, keyname) {
-    var keys, output;
-    output = [];
-    keys = [];
-    angular.forEach(collection, function(item) {
-      var key;
-      key = item[keyname];
-      if (keys.indexOf(key) === -1) {
-        keys.push(key);
-        return output.push(item);
-      }
-    });
-    return output;
-  };
-});
+]);

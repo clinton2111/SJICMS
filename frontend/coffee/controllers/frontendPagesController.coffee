@@ -25,15 +25,8 @@ angular.module 'frontend.main'
 
   $scope.loadMore = ->
     $scope.fetchPages()
-]
-.filter 'unique', ->
-  (collection, keyname) ->
-    output = []
-    keys = []
-    angular.forEach collection, (item) ->
-      key = item[keyname]
-      if keys.indexOf(key) == -1
-        keys.push key
-        output.push item
 
-    output
+  $scope.formatDate = (date)->
+    return moment(date, 'YYYY-MM-DD h:mm:ss a').format('YYYY/MM/DD')
+]
+

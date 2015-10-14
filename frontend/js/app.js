@@ -1,4 +1,4 @@
-angular.module('sjiFrontEnd', ['ui.router', 'frontend.main']).config([
+angular.module('sjiFrontEnd', ['ui.router', 'frontend.main', 'ngSanitize', 'reCAPTCHA']).config([
   '$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $stateProvider.state('home', {
@@ -18,6 +18,12 @@ angular.module('sjiFrontEnd', ['ui.router', 'frontend.main']).config([
       url: '/page/:id',
       templateUrl: 'frontend/templates/frontendPageInfo.html',
       controller: 'frontendPageInfoController'
+    }).state('home.404', {
+      url: '/404',
+      templateUrl: 'frontend/templates/404.html'
+    }).state('home.later', {
+      url: '/later',
+      templateUrl: 'frontend/templates/later.html'
     });
     $urlRouterProvider.otherwise('/home');
     return $urlRouterProvider.when('home', 'home.main');

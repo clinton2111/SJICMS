@@ -56,15 +56,14 @@ function fetchPageInfo($data)
     $response = array();
 
     try {
-        $resultArray = array();
-        $sql = "SELECT id,post_title,author_name,publish_date FROM posts WHERE id=$data->id";
+
+        $sql = "SELECT id,post_title,author_name,publish_date,post_content FROM posts WHERE id=$data->id";
         $result = mysql_query($sql) or trigger_error(mysql_error() . $sql);
         $count = mysql_num_rows($result);
-        if ($count == 1) {
+        if ($count >= 1) {
             while ($row = mysql_fetch_assoc($result)) {
 
                 if (strtotime($data->now) > strtotime($row['publish_date'])) {
-                    $resultArray[] = $row;
                     $response['status'] = 'Success';
                     $response['message'] = 'Data present';
                     $response['results'] = json_encode($row);

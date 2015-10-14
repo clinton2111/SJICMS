@@ -2,6 +2,45 @@
 
 
     <div class="col s12 m8 l8">
+        <div ng-show="post">
+            <h1>{{post.post_title}}</h1>
+
+            <div ng-bind-html="post.post_content"></div>
+            <br>
+            <blockquote>
+                - by {{post.author_name}} on {{post.publish_date | myDate}}
+            </blockquote>
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large red tooltipped" data-position="left" data-delay="50"
+                   data-tooltip="Post a Comment">
+                    <i class="material-icons">comment</i>
+                </a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <h5>Comments</h5>
+
+        <div ng-show="comments">
+
+        </div>
+        <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+            <a class="btn-floating btn-large red tooltipped" data-position="left" data-delay="50"
+               data-tooltip="Post a Comment" ng-click="openModal()">
+                <i class="material-icons">comment</i>
+            </a>
+        </div>
+
+        <!-- Comment Modal Structure -->
+        <div id="commentModal" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+            </div>
+        </div>
 
 
         <div class="load-bar" ng-show="showLoader">

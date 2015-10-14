@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc6fdad9-1c1e-4235-a02a-8c8c18e91afe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/coffee/controllers/dashBoardManageUsersController.coffee" afterPath="$PROJECT_DIR$/admin/coffee/controllers/dashBoardManageUsersController.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/controllers/dashBoardManageUsersController.js" afterPath="$PROJECT_DIR$/admin/js/controllers/dashBoardManageUsersController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/coffee/controllers/dashboardCreatePageController.coffee" afterPath="$PROJECT_DIR$/admin/coffee/controllers/dashboardCreatePageController.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/controllers/dashboardCreatePageController.js" afterPath="$PROJECT_DIR$/admin/js/controllers/dashboardCreatePageController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/coffee/controllers/dashboardEditPagesController.coffee" afterPath="$PROJECT_DIR$/admin/coffee/controllers/dashboardEditPagesController.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/controllers/dashboardEditPagesController.js" afterPath="$PROJECT_DIR$/admin/js/controllers/dashboardEditPagesController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/templates/dashboardManageUsers.html" afterPath="$PROJECT_DIR$/admin/templates/dashboardManageUsers.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/coffee/controllers/dashboardPagesController.coffee" afterPath="$PROJECT_DIR$/admin/coffee/controllers/dashboardPagesController.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/controllers/dashboardPagesController.js" afterPath="$PROJECT_DIR$/admin/js/controllers/dashboardPagesController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/index.html" afterPath="$PROJECT_DIR$/admin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/source/settingsHandler.php" afterPath="$PROJECT_DIR$/apis/source/settingsHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/coffee/app.coffee" afterPath="$PROJECT_DIR$/frontend/coffee/app.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/js/app.js" afterPath="$PROJECT_DIR$/frontend/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/templates/dashboardEditPage.html" afterPath="$PROJECT_DIR$/admin/templates/dashboardEditPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/source/frontendHandler.php" afterPath="$PROJECT_DIR$/apis/source/frontendHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/coffee/controllers/frontendMainController.coffee" afterPath="$PROJECT_DIR$/frontend/coffee/controllers/frontendMainController.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/js/controllers/frontendMainController.js" afterPath="$PROJECT_DIR$/frontend/js/controllers/frontendMainController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/templates/frontendPageInfo.html" afterPath="$PROJECT_DIR$/frontend/templates/frontendPageInfo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/coffee/controllers/frontendPageInfoController.coffee" afterPath="$PROJECT_DIR$/frontend/coffee/controllers/frontendPageInfoController.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/js/controllers/frontendPageInfoController.js" afterPath="$PROJECT_DIR$/frontend/js/controllers/frontendPageInfoController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/templates/frontendPages.html" afterPath="$PROJECT_DIR$/frontend/templates/frontendPages.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/coffee/controllers/frontendPagesController.coffee" afterPath="$PROJECT_DIR$/frontend/coffee/controllers/frontendPagesController.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/js/controllers/frontendPagesController.js" afterPath="$PROJECT_DIR$/frontend/js/controllers/frontendPagesController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SJICMS.iws" />
@@ -80,12 +78,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.48736462" vertical-offset="252" max-vertical-offset="990">
+              <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="frontendPageInfo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/templates/frontendPageInfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="324">
-              <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
-              <folding />
+            <state vertical-scroll-proportion="-9.851851" vertical-offset="400" max-vertical-offset="1026">
+              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,34 +104,34 @@
       <file leaf-file-name="frontendPageInfoController.coffee" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/coffee/controllers/frontendPageInfoController.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+              <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frontendPagesController.coffee" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/coffee/controllers/frontendPagesController.coffee">
+      <file leaf-file-name="app.coffee" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/coffee/app.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
+              <caret line="1" column="69" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frontendHandler.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="frontendHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apis/source/frontendHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4676525" vertical-offset="935" max-vertical-offset="1746">
-              <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="42" />
+            <state vertical-scroll-proportion="-12.0" vertical-offset="846" max-vertical-offset="1728">
+              <caret line="65" column="78" selection-start-line="65" selection-start-column="78" selection-end-line="65" selection-end-column="78" />
               <folding>
-                <marker date="1444828650401" expanded="true" signature="463:569" placeholder="SELECT id,po..posts..." />
-                <marker date="1444828650401" expanded="true" signature="463:570" placeholder="SELECT post_..posts..." />
-                <marker date="1444828650401" expanded="true" signature="463:576" placeholder="SELECT post_..posts..." />
-                <marker date="1444828650401" expanded="true" signature="1613:1679" placeholder="SELECT id,po..posts..." />
-                <marker date="1444828650401" expanded="true" signature="1613:1688" placeholder="SELECT id,po..posts..." />
+                <marker date="1444831406617" expanded="true" signature="463:569" placeholder="SELECT id,po..posts..." />
+                <marker date="1444831406617" expanded="true" signature="463:570" placeholder="SELECT post_..posts..." />
+                <marker date="1444831406617" expanded="true" signature="463:576" placeholder="SELECT post_..posts..." />
+                <marker date="1444831406617" expanded="true" signature="1582:1661" placeholder="SELECT id,po..posts..." />
+                <marker date="1444831406617" expanded="true" signature="1582:1670" placeholder="SELECT id,po..posts..." />
               </folding>
             </state>
           </provider>
@@ -130,7 +141,7 @@
         <entry file="file://$PROJECT_DIR$/frontend/coffee/services/frontendService.coffee">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="774">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="32" />
+              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -149,17 +160,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/admin/templates/dashboardHome.html" />
-        <option value="$PROJECT_DIR$/bower.json" />
-        <option value="$PROJECT_DIR$/admin/css/style.css" />
         <option value="$PROJECT_DIR$/apis/source/validateUser.php" />
         <option value="$PROJECT_DIR$/admin/coffee/directives/materialSelect.coffee" />
         <option value="$PROJECT_DIR$/admin/js/controllers/dashboardCreatePageController.js" />
-        <option value="$PROJECT_DIR$/admin/templates/dashboardCreatePages.html" />
         <option value="$PROJECT_DIR$/admin/coffee/controllers/dashBoardEditPagesController.coffee" />
         <option value="$PROJECT_DIR$/admin/templates/dashboardManagePages.html" />
-        <option value="$PROJECT_DIR$/admin/templates/dashboardEditPage.html" />
         <option value="$PROJECT_DIR$/admin/coffee/services/dashboardPagesService.coffee" />
         <option value="$PROJECT_DIR$/apis/source/pagesHandler.php" />
         <option value="$PROJECT_DIR$/admin/coffee/controllers/dashboardController.coffee" />
@@ -186,20 +191,26 @@
         <option value="$PROJECT_DIR$/admin/coffee/app.coffee" />
         <option value="$PROJECT_DIR$/apis/source/auth.php" />
         <option value="$PROJECT_DIR$/apis/source/refreshToken.php" />
-        <option value="$PROJECT_DIR$/frontend/coffee/controllers/frontendMainController.coffee" />
         <option value="$PROJECT_DIR$/frontend/templates/frontendMain.html" />
         <option value="$PROJECT_DIR$/frontend/styles/styles.css" />
         <option value="$PROJECT_DIR$/admin/coffee/controllers/dashboardPagesController.coffee" />
         <option value="$PROJECT_DIR$/admin/coffee/controllers/dashboardCreatePageController.coffee" />
         <option value="$PROJECT_DIR$/admin/coffee/controllers/dashboardEditPagesController.coffee" />
+        <option value="$PROJECT_DIR$/frontend/coffee/services/frontendService.coffee" />
+        <option value="$PROJECT_DIR$/admin/templates/dashboardCreatePages.html" />
+        <option value="$PROJECT_DIR$/apis/source/frontendHandler.php" />
+        <option value="$PROJECT_DIR$/frontend/assets/images/404.svg" />
+        <option value="$PROJECT_DIR$/frontend/templates/404.html" />
+        <option value="$PROJECT_DIR$/frontend/assets/images/later.svg" />
+        <option value="$PROJECT_DIR$/frontend/templates/later.html" />
         <option value="$PROJECT_DIR$/frontend/coffee/controllers/frontendPagesController.coffee" />
+        <option value="$PROJECT_DIR$/frontend/templates/frontendPages.html" />
+        <option value="$PROJECT_DIR$/frontend/coffee/controllers/frontendMainController.coffee" />
+        <option value="$PROJECT_DIR$/admin/templates/dashboardEditPage.html" />
+        <option value="$PROJECT_DIR$/frontend/coffee/controllers/frontendPageInfoController.coffee" />
+        <option value="$PROJECT_DIR$/frontend/templates/frontendPageInfo.html" />
         <option value="$PROJECT_DIR$/frontend/coffee/app.coffee" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/frontend/templates/frontendPages.html" />
-        <option value="$PROJECT_DIR$/frontend/coffee/controllers/frontendPageInfoController.coffee" />
-        <option value="$PROJECT_DIR$/frontend/coffee/services/frontendService.coffee" />
-        <option value="$PROJECT_DIR$/frontend/templates/frontendPageInfo.html" />
-        <option value="$PROJECT_DIR$/apis/source/frontendHandler.php" />
       </list>
     </option>
   </component>
@@ -267,10 +278,6 @@
               <option name="myItemId" value="frontend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -283,6 +290,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coffee" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -301,6 +312,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="coffee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SJICMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SJICMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,7 +430,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -445,46 +478,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://db-console:/ad63cca2/5d290cae-5578-4f80-9832-55b93265d245/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="592">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ad63cca2/5d290cae-5578-4f80-9832-55b93265d245/sji_cms..users">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91803277" vertical-offset="0" max-vertical-offset="630">
-          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
-        </state>
-      </provider>
-      <provider editor-type-id="MultiMarkdownFxHtmlEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/dashboardHome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/ad63cca2/5d290cae-5578-4f80-9832-55b93265d245/sji_cms..posts">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
@@ -520,13 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="552">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/dashboardEditPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16333938" vertical-offset="0" max-vertical-offset="1350">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -589,13 +575,6 @@
           <caret line="38" column="119" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="119" />
           <caret line="39" column="119" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="119" />
           <caret line="40" column="119" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/dashboardCreatePages.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.032667875" vertical-offset="162" max-vertical-offset="2178">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -699,26 +678,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/coffee/controllers/frontendMainController.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15490533" vertical-offset="0" max-vertical-offset="581">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/coffee/controllers/frontendHomeController.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/templates/frontendHome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2643254" vertical-offset="0" max-vertical-offset="846">
-          <caret line="38" column="104" selection-start-line="38" selection-start-column="104" selection-end-line="38" selection-end-column="104" />
           <folding />
         </state>
       </provider>
@@ -768,34 +731,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/templates/frontendMain.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.33212996" vertical-offset="814" max-vertical-offset="1368">
-          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apis/source/pagesHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.857671" vertical-offset="2700" max-vertical-offset="4518">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/coffee/controllers/dashboardPagesController.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52844036" vertical-offset="0" max-vertical-offset="1062">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/dashboardManagePages.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38267148" vertical-offset="1012" max-vertical-offset="1566">
-          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="71" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -816,14 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/coffee/app.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2580645" vertical-offset="1404" max-vertical-offset="2142">
-          <caret line="8" column="34" selection-start-line="5" selection-start-column="4" selection-end-line="8" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/templates/auth.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.88135594" vertical-offset="1044" max-vertical-offset="1782">
@@ -832,34 +763,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/admin/templates/dashboardCreatePages.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.779661" vertical-offset="324" max-vertical-offset="990">
-          <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.7992278" vertical-offset="1350" max-vertical-offset="2178">
+          <caret line="98" column="52" selection-start-line="98" selection-start-column="52" selection-end-line="98" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/coffee/app.coffee">
+    <entry file="file://$PROJECT_DIR$/admin/coffee/app.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52667814" vertical-offset="0" max-vertical-offset="702">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.032258064" vertical-offset="0" max-vertical-offset="2142">
+          <caret line="1" column="93" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/templates/frontendMain.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1864407" vertical-offset="0" max-vertical-offset="1368">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/templates/frontendHome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06949807" vertical-offset="162" max-vertical-offset="846">
+          <caret line="11" column="69" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/assets/images/later.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
+          <caret line="1" column="21815" selection-start-line="1" selection-start-column="21815" selection-end-line="1" selection-end-column="21815" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/assets/images/404.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033027522" vertical-offset="0" max-vertical-offset="545">
+          <caret line="1" column="12055" selection-start-line="1" selection-start-column="12055" selection-end-line="1" selection-end-column="12055" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/templates/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="144">
+          <caret line="2" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/templates/later.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06779661" vertical-offset="0" max-vertical-offset="531">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/source/frontendHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="846" max-vertical-offset="1728">
+          <caret line="65" column="78" selection-start-line="65" selection-start-column="78" selection-end-line="65" selection-end-column="78" />
+          <folding>
+            <marker date="1444831406617" expanded="true" signature="463:569" placeholder="SELECT id,po..posts..." />
+            <marker date="1444831406617" expanded="true" signature="463:570" placeholder="SELECT post_..posts..." />
+            <marker date="1444831406617" expanded="true" signature="463:576" placeholder="SELECT post_..posts..." />
+            <marker date="1444831406617" expanded="true" signature="1582:1661" placeholder="SELECT id,po..posts..." />
+            <marker date="1444831406617" expanded="true" signature="1582:1670" placeholder="SELECT id,po..posts..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/coffee/controllers/frontendPagesController.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78313255" vertical-offset="103" max-vertical-offset="684">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/templates/frontendPages.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.35740072" vertical-offset="0" max-vertical-offset="630">
+          <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/templates/frontendPageInfo.html">
+    <entry file="file://$PROJECT_DIR$/frontend/coffee/controllers/frontendMainController.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="554">
-          <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.5886403" vertical-offset="0" max-vertical-offset="581">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/dashboardEditPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32490975" vertical-offset="0" max-vertical-offset="1350">
+          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/dashboardManagePages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65884477" vertical-offset="985" max-vertical-offset="1566">
+          <caret line="75" column="59" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/coffee/controllers/dashboardPagesController.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06338028" vertical-offset="0" max-vertical-offset="1062">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="4" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -867,38 +892,43 @@
     <entry file="file://$PROJECT_DIR$/frontend/coffee/services/frontendService.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="774">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="32" />
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/templates/frontendPageInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.851851" vertical-offset="400" max-vertical-offset="1026">
+          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/coffee/controllers/frontendPageInfoController.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/coffee/controllers/frontendPagesController.coffee">
+    <entry file="file://$PROJECT_DIR$/frontend/coffee/app.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
+          <caret line="1" column="69" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apis/source/frontendHandler.php">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4676525" vertical-offset="935" max-vertical-offset="1746">
-          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="42" />
-          <folding>
-            <marker date="1444828650401" expanded="true" signature="463:569" placeholder="SELECT id,po..posts..." />
-            <marker date="1444828650401" expanded="true" signature="463:570" placeholder="SELECT post_..posts..." />
-            <marker date="1444828650401" expanded="true" signature="463:576" placeholder="SELECT post_..posts..." />
-            <marker date="1444828650401" expanded="true" signature="1613:1679" placeholder="SELECT id,po..posts..." />
-            <marker date="1444828650401" expanded="true" signature="1613:1688" placeholder="SELECT id,po..posts..." />
-          </folding>
+        <state vertical-scroll-proportion="0.48736462" vertical-offset="252" max-vertical-offset="990">
+          <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
