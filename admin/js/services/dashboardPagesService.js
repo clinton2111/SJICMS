@@ -95,7 +95,7 @@ angular.module('dashBoard.pagesCtrl').factory('publishPages', [
         var q;
         q = $q.defer();
         $http({
-          url: API.url + 'pagesHandler.php',
+          url: API.url + 'pagesHandler.phpp',
           method: 'POST',
           data: {
             id: id,

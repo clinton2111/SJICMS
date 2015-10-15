@@ -33,11 +33,11 @@ angular.module 'frontend.main'
         q.reject(error)
       q.promise
 
-    fetchSearchResults: (query,now)->
+    fetchSearchResults: (query, now)->
       data =
         location: 'fetchSearchResults'
         query: query
-        now:now
+        now: now
 
       q = $q.defer()
       $http
