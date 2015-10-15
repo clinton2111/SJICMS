@@ -1,44 +1,15 @@
-angular.module('dashboard.settingsCtrl').factory('settingsFactory', [
+angular.module('dashBoard.pagesCtrl').factory('mailFactory', [
   '$http', '$q', 'API', function($http, $q, API) {
     return {
-      updatePassword: function(password) {
-        var q;
-        password.location = 'updatePassword';
-        q = $q.defer();
-        $http({
-          url: API.url + 'settingsHandler.php',
-          method: 'POST',
-          data: password
-        }).then(function(data) {
-          return q.resolve(data);
-        }, function(error) {
-          return q.reject(error);
-        });
-        return q.promise;
-      },
-      addUser: function(data) {
-        var q;
-        data.location = 'addUser';
-        q = $q.defer();
-        $http({
-          url: API.url + 'settingsHandler.php',
-          method: 'POST',
-          data: data
-        }).then(function(data) {
-          return q.resolve(data);
-        }, function(error) {
-          return q.reject(error);
-        });
-        return q.promise;
-      },
-      fetchAdminDetails: function() {
+      fetchMail: function(offset) {
         var data, q;
         data = {
-          location: 'fetchAdminDetails'
+          location: 'fetchMail',
+          offset: offset
         };
         q = $q.defer();
         $http({
-          url: API.url + 'settingsHandler.php',
+          url: API.url + 'mailHandler.php',
           method: 'POST',
           data: data
         }).then(function(data) {
@@ -48,14 +19,32 @@ angular.module('dashboard.settingsCtrl').factory('settingsFactory', [
         });
         return q.promise;
       },
-      deletePerson: function(data) {
-        var q;
-        data.location = 'deletePerson';
+      deleteMail: function(id) {
+        var data, q;
+        data = {
+          location: 'deleteMail',
+          id: id
+        };
         q = $q.defer();
         $http({
-          url: API.url + 'settingsHandler.php',
+          url: API.url + 'mailHandler.php',
           method: 'POST',
           data: data
+        }).then(function(data) {
+          return q.resolve(data);
+        }, function(error) {
+          return q.reject(error);
+        });
+        return q.promise;
+      },
+      sendMail: function(mailData) {
+        var q;
+        mailData.location = 'sendMail';
+        q = $q.defer();
+        $http({
+          url: API.url + 'mailHandler.php',
+          method: 'POST',
+          data: mailData
         }).then(function(data) {
           return q.resolve(data);
         }, function(error) {

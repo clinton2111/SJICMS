@@ -15,6 +15,10 @@ try {
         updatePassword($data);
     } elseif ($data->location == 'addUser') {
         addNewUser($data, $SMTPDetails, $HOST);
+    } elseif ($data->location == 'fetchAdminDetails') {
+        fetchAdminDetails();
+    } elseif ($data->location == 'deletePerson') {
+        deletePerson($data);
     }
 } catch (DomainException $ex) {
     header('HTTP/1.0 401 Unauthorized');
@@ -56,7 +60,7 @@ function addNewUser($data, $SMTPDetails, $HOST)
         $count = mysql_num_rows($result);
 
         if ($count != 1) {
-            $sql = "Insert into users (email,password,username,role) VALUES ('" . $data->email . "','" . $data->passEncrypted . "','" . addslashes($data->name) . "','" . $data->role . "')";
+            $sql = "Insert into users (email,password,username,role) VALUES ('" . $data->email . "','" . $data->passEncrypted . "','" . $data->name . "','" . $data->role . "')";
             $result = mysql_query($sql) or die(mysql_error());
             if ($result == 1) {
                 $rarUrl = $HOST . '/admin/#/auth/login//';
@@ -84,9 +88,6 @@ function addNewUser($data, $SMTPDetails, $HOST)
                     echo json_encode($response);
                 }
 
-
-//                $response['status'] = 'Success';
-//                $response['message'] = 'User Created successfully';
             } else {
                 $response['status'] = 'Error';
                 $response['message'] = 'User Creation failed';
@@ -105,5 +106,75 @@ function addNewUser($data, $SMTPDetails, $HOST)
         $response['status'] = 'Error';
         $response['message'] = $e->getMessage();
         echo json_encode($response);
+    }
+}
+
+function fetchAdminDetails()
+{
+    $response = array();
+    $resultArray = [];
+    try {
+        $sql = "SELECT id,email,username,role FROM users";
+        $result = mysql_query($sql) or trigger_error(mysql_error() . $sql);
+        $resultCount = mysql_num_rows($result);
+        if ($resultCount > 0) {
+            while ($row = mysql_fetch_assoc($result)) {
+                $resultArray[] = $row;
+
+            }
+            $response['status'] = 'Success';
+            $response['message'] = "Admin details fetched";
+            $response['results'] = $resultArray;
+        } else {
+            $response['status'] = 'Error';
+            $response['message'] = 'No info in the Database';
+            die();
+        }
+        echo json_encode($response);
+    } catch (exception $e) {
+        $response['status'] = 'Error';
+        $response['message'] = $e->getMessage();
+        echo json_encode($response);
+        die();
+    }
+}
+
+function deletePerson($data)
+{
+    $response = array();
+    try {
+        $sql = "SELECT role FROM users WHERE id='$data->my_id'";
+        $result = mysql_query($sql) or trigger_error(mysql_error() . $sql);
+        $Count = mysql_num_rows($result);
+        if ($Count == 1) {
+
+            while ($row = mysql_fetch_assoc($result)) {
+                if ($row['role'] == 'admin') {
+                    $sql2 = "Delete from users WHERE id=$data->id_to_be_deleted";
+                    $result2 = mysql_query($sql2) or trigger_error(mysql_error() . $sql2);
+                    if ($result2 == 1) {
+                        $response['status'] = 'Success';
+                        $response['message'] = 'User Deleted';
+                    } else {
+                        $response['status'] = 'Error';
+                        $response['message'] = 'User Deletion failed';
+                    }
+
+                } else {
+                    $response['status'] = 'Error';
+                    $response['message'] = 'You dont have admin privilege\'s';
+                }
+            }
+
+        } else {
+            $response['status'] = 'Error';
+            $response['message'] = 'Incorrect password. Please enter your current password';
+        }
+        echo json_encode($response);
+    } catch (Exception $e) {
+        $response['status'] = 'Error';
+        $response['message'] = $e->getMessage();
+        echo json_encode($response);
+        die();
     }
 }

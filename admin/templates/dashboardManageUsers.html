@@ -1,9 +1,9 @@
-<div>
+<div ng-init="fetchAdminDetails()">
     <div class="container">
-        <h1 class="header red-text thin">Admin Role Management</h1>
+
 
         <div>
-
+            <h1 class="header red-text thin">Admin Role Management</h1>
 
             <form ng-submit="createuser()">
 
@@ -49,6 +49,30 @@
                     </div>
                 </div>
             </form>
+        </div>
+        <div>
+            <h1 class="header red-text thin">Current Administrators</h1>
+            <table  class="responsive-table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Email ID</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr ng-repeat="user in users">
+                    <td>{{user.username}}</td>
+                    <td>{{user.role}}</td>
+                    <td>{{user.email}}</td>
+                    <td><a class="waves-effect waves-light btn teal" ng-click="deletePerson($index)">Delete User</a></td>
+                </tr>
+
+                </tbody>
+            </table>
+            <p>* Only Admins can delete other users</p>
         </div>
     </div>
 </div>

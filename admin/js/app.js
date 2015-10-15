@@ -53,6 +53,13 @@ angular.module('adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       data: {
         requiresLogin: true
       }
+    }).state('dashboard.manageMail', {
+      url: '/manage_mail',
+      templateUrl: 'templates/dashboardManageMail.html',
+      controller: 'dashBoardManageMailController',
+      data: {
+        requiresLogin: true
+      }
     });
     $urlRouterProvider.otherwise('/auth');
     jwtInterceptorProvider.tokenGetter = [

@@ -49,9 +49,15 @@ angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       controller: 'dashBoardManageUsersController'
       data:
         requiresLogin: true
+    .state 'dashboard.manageMail',
+      url: '/manage_mail'
+      templateUrl: 'templates/dashboardManageMail.html'
+      controller: 'dashBoardManageMailController'
+      data:
+        requiresLogin: true
 
     $urlRouterProvider.otherwise '/auth'
-    #    $locationProvider.html5Mode(true)
+#    $locationProvider.html5Mode(true)
 
     jwtInterceptorProvider.tokenGetter = ['config', 'store', (config, store)->
       if config.url.substr(config.url.length - 5) is '.html'
