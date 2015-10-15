@@ -856,6 +856,8 @@
         <item url="file://$PROJECT_DIR$/frontend/js/controllers/frontendMainController.min.js" />
         <item url="file://$PROJECT_DIR$/frontend/js/app.min.js" />
         <item url="file://$PROJECT_DIR$/admin/js/services/dashboardMailService.min.js" />
+        <item url="file://$PROJECT_DIR$/admin/js/controllers/dashBoardManageCommentsController.min.js" />
+        <item url="file://$PROJECT_DIR$/admin/js/services/dashboardCommentService.min.js" />
         <item url="file://$PROJECT_DIR$/admin/js/controllers/dashBoardManageMailController.min.js" />
         <item url="file://$PROJECT_DIR$/bower_components/ckeditor/plugins/find/lang/vi.min.js" />
         <item url="file://$PROJECT_DIR$/bower_components/ckeditor/plugins/find/lang/zh.min.js" />
@@ -2518,6 +2520,8 @@
       <root url="file://$PROJECT_DIR$/frontend/js/controllers/frontendMainController.min.js" />
       <root url="file://$PROJECT_DIR$/frontend/js/app.min.js" />
       <root url="file://$PROJECT_DIR$/admin/js/services/dashboardMailService.min.js" />
+      <root url="file://$PROJECT_DIR$/admin/js/controllers/dashBoardManageCommentsController.min.js" />
+      <root url="file://$PROJECT_DIR$/admin/js/services/dashboardCommentService.min.js" />
       <root url="file://$PROJECT_DIR$/admin/js/controllers/dashBoardManageMailController.min.js" />
       <root url="file://$PROJECT_DIR$/bower_components/ckeditor/plugins/find/lang/vi.min.js" />
       <root url="file://$PROJECT_DIR$/bower_components/ckeditor/plugins/find/lang/zh.min.js" />

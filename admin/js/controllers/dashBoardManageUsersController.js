@@ -26,7 +26,8 @@ angular.module('dashboard.settingsCtrl').controller('dashBoardManageUsersControl
         var response;
         response = data.data;
         if (response.status === 'Success') {
-          return Materialize.toast(response.status + " - " + response.message, 4000);
+          Materialize.toast(response.status + " - " + response.message, 4000);
+          return $scope.users.push(id);
         } else {
           return Materialize.toast(response.status + " - " + response.message, 4000);
         }

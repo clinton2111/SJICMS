@@ -27,6 +27,9 @@ angular.module 'dashboard.settingsCtrl'
         response = data.data
         if response.status is 'Success'
           Materialize.toast response.status + " - " + response.message, 4000
+          $scope.users.push(
+            id
+          )
         else
           Materialize.toast response.status + " - " + response.message, 4000
       , (error)->

@@ -55,6 +55,12 @@ angular.module 'adminPanel', ['ui.router', 'angular-jwt', 'angular-storage', 'ad
       controller: 'dashBoardManageMailController'
       data:
         requiresLogin: true
+    .state 'dashboard.manageComments',
+      url: '/manage_comments'
+      templateUrl: 'templates/dashboardManageComments.html'
+      controller: 'dashBoardManageCommentsController'
+      data:
+        requiresLogin: true
 
     $urlRouterProvider.otherwise '/auth'
 #    $locationProvider.html5Mode(true)
