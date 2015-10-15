@@ -73,11 +73,12 @@ function fetchPageInfo($data)
         $result = mysql_query($sql) or trigger_error(mysql_error() . $sql);
         $count = mysql_num_rows($result);
         $index = 0;
+        $flag = true;
         if ($count >= 1) {
             $temp = array();
             while ($row = mysql_fetch_assoc($result)) {
 
-                if (strtotime($data->now) > strtotime($row['publish_date'])) {
+                if ((strtotime($data->now) > strtotime($row['publish_date'])) == true) {
                     if ($index == 0) {
                         $results[$index]['post_title'] = $row['post_title'];
                         $results[$index]['author_name'] = $row['author_name'];
@@ -88,23 +89,25 @@ function fetchPageInfo($data)
                         $temp[$index]['comment'] = $row['comment'];
                         $temp[$index]['time_posted'] = $row['time_posted'];
                     } else {
+
                         $temp[$index]['name'] = $row['name'];
                         $temp[$index]['comment'] = $row['comment'];
                         $temp[$index]['time_posted'] = $row['time_posted'];
                     }
                     $index++;
                 } else {
-                    $response['status'] = 'Scheduled';
-                    $response['message'] = 'Data present';
-                    continue;
+                    $flag = false;
                 }
-
-
             }
-            $results[0]['comments'] = $temp;
-            $response['status'] = 'Success';
-            $response['message'] = 'Data present';
-            $response['results'] = $results;
+            if ($flag == false) {
+                $response['status'] = 'Scheduled';
+                $response['message'] = 'Data present';
+            } else {
+                $results[0]['comments'] = $temp;
+                $response['status'] = 'Success';
+                $response['message'] = 'Data present';
+                $response['results'] = $results;
+            }
 
         } else {
             $response['status'] = '404';

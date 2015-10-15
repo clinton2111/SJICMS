@@ -53,7 +53,6 @@ angular.module('frontend.main').controller('frontendPageInfoController', [
       }
       $scope.comment.now = moment().format("YYYY-MM-DD h:mm:ss a");
       $scope.comment.post_id = $stateParams.id;
-      console.log($scope.post);
       return CommentFactory.postComment($scope.comment).then(function(data) {
         var temp;
         if (data.data.status === 'Success') {

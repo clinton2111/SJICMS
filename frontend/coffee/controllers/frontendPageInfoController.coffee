@@ -46,7 +46,7 @@ angular.module 'frontend.main'
       else $scope.comment.g_recaptcha_response = vcRecaptchaService.getResponse()
       $scope.comment.now = moment().format("YYYY-MM-DD h:mm:ss a")
       $scope.comment.post_id = $stateParams.id
-      console.log $scope.post
+
 
       CommentFactory.postComment($scope.comment)
       .then (data)->

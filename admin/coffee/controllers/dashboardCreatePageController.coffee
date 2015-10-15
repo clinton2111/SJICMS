@@ -59,7 +59,7 @@ angular.module 'dashBoard.pagesCtrl'
         $scope.post.is_parent = $scope.parentId
 
       $scope.post.author = user.username
-      $scope.post.publish_date = moment($scope.post.publish_date).format("dddd, MMMM Do YYYY, h:mm:ss a")
+      $scope.post.publish_date = moment($scope.post.publish_date).format("YYYY-MM-DD h:mm:ss a")
       $scope.post.is_draft = false
 
       publishPages.uploadPage($scope.post)
