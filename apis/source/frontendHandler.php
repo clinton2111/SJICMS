@@ -27,7 +27,7 @@ function fetchPages($data)
 
     try {
         $resultArray = array();
-        $sql = "SELECT id,post_title,author_name,publish_date FROM posts WHERE is_draft=0 ORDER BY id DESC LIMIT 5 OFFSET $data->offset ";
+        $sql = "SELECT id,post_title,author_name,publish_date FROM posts WHERE is_draft=0 ORDER BY id DESC LIMIT 6 OFFSET $data->offset ";
         $result = mysql_query($sql) or trigger_error(mysql_error() . $sql);
         $count = mysql_num_rows($result);
         $index = 0;
