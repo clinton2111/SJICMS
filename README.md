@@ -74,7 +74,7 @@ define("DB_NAME", "sji_cms");
 - To access the admin panel go to **/PROJECT_ROOT/admin**
 ```
 #email_id and Password for Admin Panel
-email_id - 'clinton92@gmail.com'
+email_id - 'clinton@example.com'
 password - 'clinton2111'
 ```
 
