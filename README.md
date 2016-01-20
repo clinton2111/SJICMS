@@ -16,7 +16,7 @@ Overview
 
 Installation
 ------------
-- Install the bower dependenceis from the `bower.json` file in the project root
+- Install the bower dependence's from the `bower.json` file in the project root
 ```
 # install dependencies listed in bower.json
 $ bower install
@@ -42,8 +42,20 @@ define("DB_NAME", "sji_cms");
 - To access the admin panel go to **/PROJECT_ROOT/admin**
 ```
 #email_id and Password for Admin Panel
-email_id - 'clinton92@gmail.com'
+email_id - 'clinton@example.com'
 password - 'clinton2111'
+```
+- If you get a **ERROR: Invalid domain for site key** with respect to the Google reCaptcha while posting a comment, do one of the following
+> 1. If you're running on a virtual host change your virtual host name to **sjicms.com**
+> 2. if you're running on a live host or dont want to change your host name then go to https://www.google.com/recaptcha/intro/index.html to obtain new keys for the reCaptcha API. And make changes in the following locations.
+
+```
+#in the /Project_Root/frontend/coffee/app.coffee (or /Project_Root/frontend/js/app.js if you want to change the value in the JS directly)
+g_reCaptchaKey = New Public Key
+
+#in /Project_Root/apis/source/connection.config.php
+$gCaptchaSecretKey = New Secret Key
+
 ```
 
 if you have any problems or difficulties setting this up.please do let me know. Thank you. Have a nice day.
