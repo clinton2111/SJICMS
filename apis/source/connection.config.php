@@ -8,8 +8,8 @@ $HOST = 'http://sjicms.com';
 
 $SMTPDetails = array();
 $SMTPDetails['Host'] = 'smtp.sendgrid.net';
-$SMTPDetails['Username'] = 'aventador_21';
-$SMTPDetails['Password'] = 'Aventador2106';
+$SMTPDetails['Username'] = '';
+$SMTPDetails['Password'] = '';
 $SMTPDetails['SMTPSecure'] = 'ssl';
 $SMTPDetails['Port'] = 465;
 
