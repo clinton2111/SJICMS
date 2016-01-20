@@ -42,7 +42,7 @@ define("DB_NAME", "sji_cms");
 - To access the admin panel go to **/PROJECT_ROOT/admin**
 ```
 #email_id and Password for Admin Panel
-email_id - 'clinton92@gmail.com'
+email_id - 'clinton@example.com'
 password - 'clinton2111'
 ```
 - If you get a **ERROR: Invalid domain for site key** with respect to the Google reCaptcha while posting a comment, do one of the following
