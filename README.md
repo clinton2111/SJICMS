@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# SJICMS
+CMS for SJI
+<br>
+Features<br>
+Admin side:
+<ul>
+<li> Login for admin </li>
+<li> Settings page once the admin logs in to create username and password</li>
+<li> Create pages section. Add/edit/delete and pages listing.</li>
+<li> Ck editor for add and edit pages</li>
+<li> Listing of all the pages. There will be main pages and sub-pages that fall under the main page. (there needs to be a three level hierarchy)</li>
+<li> Sorting of pages</li>
+<li> Preview of the content before publishing the page</li>
+<li> Draft a page for further editing/adding content.</li>
+<li> Schedule a page to go online on a specific date.</li>
+<li> Contact form entries</li>
+<li> Reply for a contact form query</li>
+<li> Manage content comments</li>
+</ul>
+<br>
+Frontend side
+<ul>
+<li> Listing of the pages.</li>
+<li> Use suckerfish dropdowns to show the main pages and the secondary level and the third level pages</li>
+<li> Display page contents as seen in the preview in the admin section</li>
+<li> Contact us form</li>
+<li> Use recaptcha to secure the form from spams</li>
+<li> Search contents (top header needs to have a search form)</li>
+<li> Pages needs to have a commenting facility. Anonymous can post comments but make sure you have a captcha while posting comments.</li>
+</ul>
+=======
+>>>>>>> Develop
 SJI Practical task
 ========================
 
@@ -16,7 +51,11 @@ Overview
 
 Installation
 ------------
+<<<<<<< HEAD
 - Install the bower dependence's from the `bower.json` file in the project root
+=======
+- Install the bower dependenceis from the `bower.json` file in the project root
+>>>>>>> Develop
 ```
 # install dependencies listed in bower.json
 $ bower install
@@ -45,6 +84,7 @@ define("DB_NAME", "sji_cms");
 email_id - 'clinton@example.com'
 password - 'clinton2111'
 ```
+<<<<<<< HEAD
 - If you get a **ERROR: Invalid domain for site key** with respect to the Google reCaptcha while posting a comment, do one of the following
 > 1. If you're running on a virtual host change your virtual host name to **sjicms.com**
 > 2. if you're running on a live host or dont want to change your host name then go to https://www.google.com/recaptcha/intro/index.html to obtain new keys for the reCaptcha API. And make changes in the following locations.
@@ -61,3 +101,10 @@ $gCaptchaSecretKey = New Secret Key
 if you have any problems or difficulties setting this up.please do let me know. Thank you. Have a nice day.
 
 Developed and Tested on Windows 10 running XAMPP 1.8.2 with a PHP version of 5.6.3 
+=======
+
+if you have any problems or difficulties setting this up.please do let me know. Thank you. Have a nice day.
+
+Developed and Tested on Windows 10 running XAMPP 1.8.2 with a PHP version of 5.6.3 
+>>>>>>> parent of b8d28b7... no message
+>>>>>>> Develop
