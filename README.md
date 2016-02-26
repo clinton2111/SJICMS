@@ -85,6 +85,9 @@ email_id - 'clinton@example.com'
 password - 'clinton2111'
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 652f15e3fad96e5f8ba392ea026ac26db8dfbb67
 - If you get a **ERROR: Invalid domain for site key** with respect to the Google reCaptcha while posting a comment, do one of the following
 > 1. If you're running on a virtual host change your virtual host name to **sjicms.com**
 > 2. if you're running on a live host or dont want to change your host name then go to https://www.google.com/recaptcha/intro/index.html to obtain new keys for the reCaptcha API. And make changes in the following locations.
@@ -97,14 +100,20 @@ g_reCaptchaKey = New Public Key
 $gCaptchaSecretKey = New Secret Key
 
 ```
+<<<<<<< HEAD
 
 if you have any problems or difficulties setting this up.please do let me know. Thank you. Have a nice day.
 
 Developed and Tested on Windows 10 running XAMPP 1.8.2 with a PHP version of 5.6.3 
 =======
+=======
+>>>>>>> 652f15e3fad96e5f8ba392ea026ac26db8dfbb67
 
 if you have any problems or difficulties setting this up.please do let me know. Thank you. Have a nice day.
 
 Developed and Tested on Windows 10 running XAMPP 1.8.2 with a PHP version of 5.6.3 
+<<<<<<< HEAD
 >>>>>>> parent of b8d28b7... no message
 >>>>>>> Develop
+=======
+>>>>>>> 652f15e3fad96e5f8ba392ea026ac26db8dfbb67

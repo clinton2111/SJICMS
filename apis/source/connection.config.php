@@ -8,6 +8,7 @@ $HOST = 'http://sjicms.com';
 
 $SMTPDetails = array();
 $SMTPDetails['Host'] = 'smtp.sendgrid.net';
+<<<<<<< HEAD
 <<<<<<< .merge_file_a03256
 $SMTPDetails['Username'] = 'username';
 $SMTPDetails['Password'] = 'password';
@@ -15,6 +16,10 @@ $SMTPDetails['Password'] = 'password';
 $SMTPDetails['Username'] = '';
 $SMTPDetails['Password'] = '';
 >>>>>>> .merge_file_a06692
+=======
+$SMTPDetails['Username'] = '';
+$SMTPDetails['Password'] = '';
+>>>>>>> 652f15e3fad96e5f8ba392ea026ac26db8dfbb67
 $SMTPDetails['SMTPSecure'] = 'ssl';
 $SMTPDetails['Port'] = 465;
 
